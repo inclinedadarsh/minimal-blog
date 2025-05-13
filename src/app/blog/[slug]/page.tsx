@@ -1,4 +1,5 @@
 import { getBlogBySlug } from "@/lib/blogs";
+import { compileMDXWithOptions } from "@/lib/mdx";
 import type { Metadata } from "next";
 import { MDXRemote } from "next-mdx-remote/rsc";
 
@@ -23,20 +24,23 @@ export async function generateMetadata({
 export default async function BlogPage({ params }: BlogPageProps) {
 	const { slug } = await params;
 	const blog = await getBlogBySlug(slug);
+	const { content } = await compileMDXWithOptions(blog.content);
 
 	return (
-		<article className="prose">
-			<h1>{blog.title}</h1>
-			<time dateTime={blog.datePublished}>
+		<article className="prose prose-neutral dark:prose-invert max-w-none">
+			<h1 className="text-2xl font-bold font-title mb-2">{blog.title}</h1>
+			<time
+				dateTime={blog.datePublished}
+				className="text-neutral-600 dark:text-neutral-400"
+			>
 				{new Date(blog.datePublished).toLocaleDateString("en-US", {
 					year: "numeric",
 					month: "long",
 					day: "numeric",
 				})}
 			</time>
-			<div className="mt-4">
-				<MDXRemote source={blog.content} />
-			</div>
+			<hr className="my-6 border-neutral-200 dark:border-neutral-800" />
+			<div className="mt-8">{content}</div>
 		</article>
 	);
 }

@@ -123,4 +123,119 @@
 	body {
 		@apply bg-background text-foreground;
 	}
+
+	/* Heading styles */
+	.prose h1 {
+		@apply text-3xl font-bold font-title mt-8 mb-4 text-foreground;
+	}
+
+	.prose h2 {
+		@apply text-2xl font-bold font-title mt-8 mb-4 text-foreground;
+	}
+
+	.prose h3 {
+		@apply text-xl font-bold font-title mt-6 mb-3 text-foreground;
+	}
+
+	.prose h4 {
+		@apply text-lg font-bold font-title mt-4 mb-2 text-foreground;
+	}
+
+	/* Paragraph spacing */
+	.prose p {
+		@apply my-4;
+	}
+
+	/* Link styles */
+	.prose a:not(h1 a, h2 a, h3 a, h4 a) {
+		@apply text-orange-600 no-underline hover:text-orange-400 transition-colors;
+	}
+
+	/* Heading link styles */
+	.prose h1 a,
+	.prose h2 a,
+	.prose h3 a,
+	.prose h4 a {
+		@apply text-foreground no-underline hover:text-foreground/80 transition-colors;
+	}
+
+	/* Code block styles */
+	.prose pre {
+		@apply relative my-6 rounded-lg bg-neutral-100 dark:bg-neutral-900 p-4;
+	}
+
+	.prose pre > code {
+		@apply grid text-sm;
+	}
+
+	.prose pre .line {
+		@apply border-l-2 border-l-transparent px-4;
+	}
+
+	.prose pre .line.highlighted {
+		@apply border-l-orange-600 bg-orange-600/10;
+	}
+
+	.prose pre .word {
+		@apply rounded bg-orange-600/20 px-1;
+	}
+
+	/* Inline code styles */
+	.prose code:not(pre code) {
+		@apply rounded bg-neutral-100 dark:bg-neutral-900 px-1.5 py-0.5 text-sm text-orange-600 dark:text-orange-400;
+	}
+
+	/* List styles */
+	.prose ul {
+		@apply my-4 list-disc pl-6;
+	}
+
+	.prose ol {
+		@apply my-4 list-decimal pl-6;
+	}
+
+	.prose li {
+		@apply my-1.5 text-foreground/80;
+	}
+
+	.prose li::marker {
+		@apply text-foreground/60;
+	}
+
+	/* Task list styles */
+	.prose .task-list-item {
+		@apply flex items-start gap-2 my-1.5;
+	}
+
+	.prose .task-list-item > input[type="checkbox"] {
+		@apply mt-1.5 h-4 w-4 rounded border-neutral-300 text-orange-600 focus:ring-orange-600 dark:border-neutral-700;
+	}
+
+	/* Table styles */
+	.prose table {
+		@apply w-full my-6 border-collapse;
+	}
+
+	.prose th {
+		@apply px-4 py-2 text-left border border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-900 font-medium text-foreground;
+	}
+
+	.prose td {
+		@apply px-4 py-2 border border-neutral-200 dark:border-neutral-800 text-foreground/80;
+	}
+
+	/* Image styles */
+	.prose img {
+		@apply my-8 rounded-lg border border-neutral-200 dark:border-neutral-800;
+	}
+
+	/* Horizontal rule styles */
+	.prose hr {
+		@apply my-8 border-neutral-200 dark:border-neutral-800;
+	}
+
+	/* Blockquote styles */
+	.prose blockquote {
+		@apply my-6 border-l-4 border-neutral-200 dark:border-neutral-800 pl-4 italic text-foreground/70;
+	}
 }
