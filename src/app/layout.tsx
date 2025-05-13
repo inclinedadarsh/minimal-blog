@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Inter_Tight } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 
 const inter = Inter({
-	variable: "--font-inter",
+	variable: "--font-body",
+	subsets: ["latin"],
+});
+
+const interTight = Inter_Tight({
+	variable: "--font-heading",
 	subsets: ["latin"],
 });
 
@@ -21,7 +26,9 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`${inter.className} antialiased max-w-xl px-5 md:px-0 mx-auto`}
+				className={
+					"font-body antialiased max-w-xl px-5 md:px-0 mx-auto"
+				}
 			>
 				<Navbar />
 				{children}

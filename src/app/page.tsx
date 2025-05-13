@@ -1,3 +1,15 @@
 export default function Home() {
-	return <h1>Hello World</h1>;
+	return (
+		<main className="md:mt-5">
+			<h1 className="text-2xl font-bold font-title">Adarsh Dubey</h1>
+			<p className="mt-6 text-black/80">
+				I'm a Vim enthusiast and tab advocate, finding unmatched
+				efficiency in Vim's keystroke commands and tabs' flexibility for
+				personal viewing preferences. This extends to my support for
+				static typing, where its early error detection ensures cleaner
+				code, and my preference for dark mode, which eases long coding
+				sessions by reducing eye strain.
+			</p>
+		</main>
+	);
 }
