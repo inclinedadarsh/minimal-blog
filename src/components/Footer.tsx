@@ -9,10 +9,11 @@ const Footer = () => {
 					href="https://x.com/inclinedadarsh"
 					target="_blank"
 					rel="noopener noreferrer"
-					className="underline underline-offset-2 hover:no-underline"
+					className="text-orange-600 hover:text-orange-400 transition-colors"
 				>
 					Adarsh Dubey
 				</Link>
+				.
 			</p>
 		</footer>
 	);
