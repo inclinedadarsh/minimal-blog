@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Footer = () => {
 	return (
-		<footer id="footer" className="mt-10">
+		<footer id="footer" className="mt-10 py-8 border-t border-border">
 			<p className="">
 				Made with ❤️ by{" "}
 				<Link
