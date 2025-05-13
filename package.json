@@ -7,7 +7,8 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "biome check",
-		"lint:fix": "biome check --write"
+		"lint:fix": "biome check --write",
+		"prepare": "husky"
 	},
 	"dependencies": {
 		"react": "^19.0.0",
@@ -20,8 +21,15 @@
 		"@types/node": "^20",
 		"@types/react": "^19",
 		"@types/react-dom": "^19",
+		"husky": "^9.1.7",
+		"lint-staged": "^16.0.0",
 		"tailwindcss": "^4",
 		"typescript": "^5"
 	},
-	"trustedDependencies": ["@biomejs/biome", "@tailwindcss/oxide"]
+	"trustedDependencies": ["@biomejs/biome", "@tailwindcss/oxide"],
+	"lint-staged": {
+		"*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc,css,html,md,yml,yaml}": [
+			"biome check --write --no-errors-on-unmatched"
+		]
+	}
 }
