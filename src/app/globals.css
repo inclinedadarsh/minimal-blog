@@ -124,21 +124,42 @@
 		@apply bg-background text-foreground;
 	}
 
+	/* Bold text in markdown */
+	.prose strong {
+		@apply font-semibold;
+	}
+
 	/* Heading styles */
 	.prose h1 {
-		@apply text-3xl font-bold font-title mt-8 mb-4 text-foreground;
+		@apply text-3xl font-bold font-title mt-8 mb-4 text-foreground relative;
 	}
 
 	.prose h2 {
-		@apply text-2xl font-bold font-title mt-8 mb-4 text-foreground;
+		@apply text-2xl font-bold font-title mt-8 mb-4 text-foreground relative;
 	}
 
 	.prose h3 {
-		@apply text-xl font-bold font-title mt-6 mb-3 text-foreground;
+		@apply text-xl font-bold font-title mt-6 mb-3 text-foreground relative;
 	}
 
 	.prose h4 {
-		@apply text-lg font-bold font-title mt-4 mb-2 text-foreground;
+		@apply text-lg font-bold font-title mt-4 mb-2 text-foreground relative;
+	}
+
+	/* Heading hover effects */
+	.prose h1::before,
+	.prose h2::before,
+	.prose h3::before,
+	.prose h4::before {
+		content: "#";
+		@apply absolute -left-6 opacity-0 text-muted-foreground transition-all duration-200;
+	}
+
+	.prose h1:hover::before,
+	.prose h2:hover::before,
+	.prose h3:hover::before,
+	.prose h4:hover::before {
+		@apply opacity-100 -left-8;
 	}
 
 	/* Paragraph spacing */
