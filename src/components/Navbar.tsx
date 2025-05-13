@@ -14,7 +14,7 @@ const navLinks: NavLink[] = [
 	},
 	{
 		label: "blogs",
-		href: "/blogs",
+		href: "/blog",
 	},
 	{
 		label: "website",
