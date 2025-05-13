@@ -28,10 +28,13 @@ const rehypeExternalLinks = () => {
 		// Find all link nodes
 		const visit = (node: Element) => {
 			if (node.type === "element" && node.tagName === "a") {
-				// Add target="_blank" and rel="noopener noreferrer"
-				node.properties = node.properties || {};
-				node.properties.target = "_blank";
-				node.properties.rel = "noopener noreferrer";
+				// Only add target="_blank" for external links (not anchor links)
+				const href = node.properties?.href as string;
+				if (href && !href.startsWith("#")) {
+					node.properties = node.properties || {};
+					node.properties.target = "_blank";
+					node.properties.rel = "noopener noreferrer";
+				}
 			}
 			if (node.children) {
 				for (const child of node.children) {
