@@ -1,3 +1,4 @@
+import type { Element, Root } from "hast";
 import { compileMDX } from "next-mdx-remote/rsc";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypePrettyCode from "rehype-pretty-code";
@@ -21,6 +22,34 @@ const prettyCodeOptions: PrettyCodeOptions = {
 	},
 };
 
+// Plugin to make all links open in new tab
+const rehypeExternalLinks = () => {
+	return (tree: Root) => {
+		// Find all link nodes
+		const visit = (node: Element) => {
+			if (node.type === "element" && node.tagName === "a") {
+				// Add target="_blank" and rel="noopener noreferrer"
+				node.properties = node.properties || {};
+				node.properties.target = "_blank";
+				node.properties.rel = "noopener noreferrer";
+			}
+			if (node.children) {
+				for (const child of node.children) {
+					if (child.type === "element") {
+						visit(child);
+					}
+				}
+			}
+		};
+		for (const child of tree.children) {
+			if (child.type === "element") {
+				visit(child);
+			}
+		}
+		return tree;
+	};
+};
+
 export async function compileMDXWithOptions(source: string) {
 	return compileMDX({
 		source,
@@ -32,6 +61,7 @@ export async function compileMDXWithOptions(source: string) {
 					rehypeSlug,
 					[rehypeAutolinkHeadings, { behavior: "wrap" }],
 					[rehypePrettyCode, prettyCodeOptions],
+					rehypeExternalLinks,
 				],
 			},
 		},
