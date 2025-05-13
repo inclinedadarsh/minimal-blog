@@ -20,13 +20,21 @@ const links: LinkType[] = [
 		label: "linkedin",
 		href: "https://linkedin.com/in/dubeyadarsh/",
 	},
+	{
+		label: "newsletter",
+		href: "https://theneuron.substack.com/",
+	},
+	{
+		label: "youtube",
+		href: "https://www.youtube.com/@inclinedadarsh",
+	},
 ];
 
 export default function Home() {
 	return (
 		<main className="md:mt-5">
 			<h1 className="text-2xl font-bold font-title">Adarsh Dubey</h1>
-			<div className="mt-2 text-foreground/80 flex gap-4">
+			<div className="mt-2 text-foreground/80 flex gap-x-4 md:gap-6 flex-wrap">
 				{links.map(link => (
 					<Link
 						key={link.label}
@@ -41,12 +49,12 @@ export default function Home() {
 				))}
 			</div>
 			<p className="mt-4 text-foreground/80 mb-5 md:mb-10">
-				I'm a Vim enthusiast and tab advocate, finding unmatched
-				efficiency in Vim's keystroke commands and tabs' flexibility for
-				personal viewing preferences. This extends to my support for
-				static typing, where its early error detection ensures cleaner
-				code, and my preference for dark mode, which eases long coding
-				sessions by reducing eye strain.
+				I'm a web developer and machine learning enthusiast who loves
+				building in public. Currently contributing to Google DeepMind
+				through GSoC '25, and lately, I've been tinkering with LLMs. I
+				speak at local tech meetups, write technical and non-technical
+				blogs, and when I'm not lost in code, I'm probably enjoying
+				misal pav.
 			</p>
 			<AllBlogs />
 		</main>
