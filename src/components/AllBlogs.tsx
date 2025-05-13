@@ -26,7 +26,7 @@ export default async function AllBlogs() {
 								},
 							)}
 						</time>
-						<h3 className="text-neutral-900 hover:text-neutral-600 transition-colors">
+						<h3 className="text-neutral-900 hover:text-neutral-600 transition-colors font-medium">
 							{blog.title}
 						</h3>
 					</div>
