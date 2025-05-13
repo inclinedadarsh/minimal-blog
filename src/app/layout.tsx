@@ -1,3 +1,4 @@
+import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import { Inter, Inter_Tight } from "next/font/google";
 import "./globals.css";
@@ -35,6 +36,8 @@ export default function RootLayout({
 				{children}
 				<Footer />
 			</body>
+			{/* biome-ignore lint/style/noNonNullAssertion: <explanation> */}
+			<GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />
 		</html>
 	);
 }
