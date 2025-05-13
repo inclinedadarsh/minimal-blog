@@ -15,7 +15,7 @@ export default async function AllBlogs() {
 					<div className="w-full hover:text-neutral-600 transition-colors flex flex-col md:flex-row gap-0 md:gap-2">
 						<time
 							dateTime={blog.datePublished}
-							className="text-neutral-600 min-w-[120px] tabular-nums"
+							className="text-neutral-600 min-w-[120px]"
 						>
 							{new Date(blog.datePublished).toLocaleDateString(
 								"en-US",
