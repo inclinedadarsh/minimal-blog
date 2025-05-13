@@ -177,11 +177,11 @@
 
 	/* Code block styles */
 	.prose pre {
-		@apply relative my-6 rounded-lg bg-neutral-100 dark:bg-neutral-900 p-4;
+		@apply relative my-6 rounded-lg bg-neutral-100 dark:bg-neutral-900 p-4 overflow-x-auto;
 	}
 
 	.prose pre > code {
-		@apply grid text-sm;
+		@apply grid text-sm whitespace-pre;
 	}
 
 	.prose pre .line {
