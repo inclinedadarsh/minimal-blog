@@ -4,6 +4,7 @@ import { Inter, Inter_Tight } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const inter = Inter({
 	variable: "--font-body",
@@ -32,9 +33,16 @@ export default function RootLayout({
 					"font-body antialiased max-w-xl px-5 md:px-0 mx-auto"
 				}
 			>
-				<Navbar />
-				{children}
-				<Footer />
+				<ThemeProvider
+					attribute="class"
+					defaultTheme="system"
+					enableSystem
+					disableTransitionOnChange
+				>
+					<Navbar />
+					{children}
+					<Footer />
+				</ThemeProvider>
 			</body>
 			{/* biome-ignore lint/style/noNonNullAssertion: <explanation> */}
 			<GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />

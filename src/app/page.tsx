@@ -48,7 +48,7 @@ export default function Home() {
 					</Link>
 				))}
 			</div>
-			<p className="mt-4 text-foreground/80 mb-5 md:mb-10">
+			<p className="mt-4 text-foreground/80 dark:text-white mb-5 md:mb-10">
 				I'm a web developer and machine learning enthusiast who loves
 				building in public. Currently contributing to Google DeepMind
 				through GSoC '25, and lately, I've been tinkering with LLMs. I

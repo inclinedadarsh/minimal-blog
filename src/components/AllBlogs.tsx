@@ -9,13 +9,13 @@ export default async function AllBlogs() {
 			{blogs.map(blog => (
 				<Link
 					key={blog.slug}
-					className="flex flex-col space-y-1 mb-4 hover:text-black/70 transition-colors"
+					className="flex flex-col space-y-1 mb-4 hover:text-foreground/70 transition-colors"
 					href={`/blog/${blog.slug}`}
 				>
-					<div className="w-full hover:text-neutral-600 transition-colors flex flex-col md:flex-row gap-0 md:gap-2">
+					<div className="w-full hover:text-foreground/70 transition-colors flex flex-col md:flex-row gap-0 md:gap-2">
 						<time
 							dateTime={blog.datePublished}
-							className="text-neutral-600 min-w-[120px]"
+							className="text-muted-foreground min-w-[120px]"
 						>
 							{new Date(blog.datePublished).toLocaleDateString(
 								"en-US",
@@ -26,7 +26,7 @@ export default async function AllBlogs() {
 								},
 							)}
 						</time>
-						<h3 className="text-neutral-900 hover:text-neutral-600 transition-colors font-medium">
+						<h3 className="text-foreground hover:text-foreground/70 transition-colors font-medium">
 							{blog.title}
 						</h3>
 					</div>
