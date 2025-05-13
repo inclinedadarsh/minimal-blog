@@ -21,7 +21,7 @@ Well, more about my idea later, but first, let's discuss the first lab. Farza re
 
 ## My Idea
 
-![a website to log your technical journey](https://cdn.hashnode.com/res/hashnode/image/upload/v1692100882326/a8a54b4d-b6be-4f6a-aad9-956f29652121.png align="center")
+![a website to log your technical journey](https://cdn.hashnode.com/res/hashnode/image/upload/v1692100882326/a8a54b4d-b6be-4f6a-aad9-956f29652121.png)
 
 So, here's my idea! (No, I didn't create those graphics; I simply edited the text. All credit goes to the Buildspace team).
 
