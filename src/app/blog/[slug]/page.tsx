@@ -1,17 +1,19 @@
-import { getBlogBySlug } from "@/lib/blogs";
+import { getAllBlogs, getBlogBySlug } from "@/lib/blogs";
 import { compileMDXWithOptions } from "@/lib/mdx";
 import type { Metadata } from "next";
-import { MDXRemote } from "next-mdx-remote/rsc";
 
-interface BlogPageProps {
-	params: Promise<{
-		slug: string;
-	}>;
+export async function generateStaticParams() {
+	const blogs = await getAllBlogs();
+	return blogs.map(blog => ({
+		slug: blog.slug,
+	}));
 }
 
 export async function generateMetadata({
 	params,
-}: BlogPageProps): Promise<Metadata> {
+}: {
+	params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
 	const { slug } = await params;
 	const blog = await getBlogBySlug(slug);
 
@@ -21,7 +23,11 @@ export async function generateMetadata({
 	};
 }
 
-export default async function BlogPage({ params }: BlogPageProps) {
+export default async function BlogPage({
+	params,
+}: {
+	params: Promise<{ slug: string }>;
+}) {
 	const { slug } = await params;
 	const blog = await getBlogBySlug(slug);
 	const { content } = await compileMDXWithOptions(blog.content);
