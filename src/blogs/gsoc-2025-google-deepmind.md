@@ -13,9 +13,9 @@ This blog series will be about my GSoC '25 journey. I'll be releasing a blog *ea
 
 ![X announcement screenshot](/images/pre-gsoc/tweet-ss.png)
 
-I'm starting with this blog because a lot of people have been asking me how I got into Google DeepMind, what my preparations were, and about my proposal. So if you're one of those then this one's for you! I'll be talking about my background, prep for GSoC '25, project details, and will also be sharing my proposal too!
+I'm starting with this blog because a lot of people have been asking me how I got into Google DeepMind, what my preparations were, and about my proposal. So if you're one of those then this one's for you! I'll be talking about my background, prep for GSoC '25, project details, and will be sharing my proposal too!
 
-> I know a lot of people might want to skip straight to the proposal part, so if that's the case for you, check out [Proposal](#proposal).
+> I know a lot of people might want to skip straight to the proposal part, so if that's the case for you, check out the [Proposal](#proposal) section.
 
 
 ## Background
@@ -30,17 +30,17 @@ I first heard about GSoC from [Kunal Kushwaha](https://www.youtube.com/@KunalKus
 
 ### Pre-organization announcement
 
-To increase my chances of landing a project in the program, I started contributing to [Aeon](https://www.aeon-toolkit.org/), which comes under the NumFOCUS umbrella organization. This was even before the projects were announced—around December last year. Here's my first-ever comment on an issue in the Aeon project: [https://github.com/aeon-toolkit/aeon/issues/1430](https://github.com/aeon-toolkit/aeon/issues/1430#issuecomment-2550500041). While I initially thought it was a simple documentation fix, the maintainers started discussing it in depth, and it turned into a major API design revision. That eventually became a GSoC project in itself.
+To increase my chances of landing a project in the program, I started contributing to [Aeon](https://www.aeon-toolkit.org/), which comes under the NumFOCUS umbrella organization. This was even before the projects were announced, around December last year. Here's my first-ever comment on an issue in the Aeon project: [https://github.com/aeon-toolkit/aeon/issues/1430](https://github.com/aeon-toolkit/aeon/issues/1430#issuecomment-2550500041). While I initially thought it was a simple documentation fix, the maintainers started discussing it in depth, and it turned into a major API design revision. That eventually became a GSoC project in itself.
 
 ![Aeon's PR Comment SS](/images/pre-gsoc/aeon-pr-comment-ss.png)
 
-This gave me a huge confidence boost and the assurance that, if nothing else, I could at least apply for this project. But I wanted to work on something big—something that would push me to learn new concepts during GSoC—so I kept contributing to Aeon across multiple issues.
+This gave me a huge confidence boost and the assurance that, if nothing else, I could at least apply for this project. But I wanted to work on something big, something that would push me to learn new concepts during GSoC. So I kept contributing to Aeon across multiple issues.
 
-Around January, Aeon released its project list for the 2025 season. Among all the projects, the one that really caught my eye was [**Project #3: Forecasting - Deep learning for forecasting**](https://github.com/aeon-toolkit/aeon-admin/blob/main/gsoc/gsoc-2025-projects.md#project-3-forecasting---deep-learning-for-forecasting). I loved it because, at the time, I was already diving deep into deep learning models—so this felt like the perfect opportunity to apply that knowledge to something practical.
+Around January, Aeon released its project list for the 2025 season. Among all the projects, the one that really caught my eye was [**Project #3: Forecasting - Deep learning for forecasting**](https://github.com/aeon-toolkit/aeon-admin/blob/main/gsoc/gsoc-2025-projects.md#project-3-forecasting---deep-learning-for-forecasting). I loved it because, at the time, I was already diving deep into deep learning models so this felt like the perfect opportunity to apply that knowledge to something practical.
 
 ### Organization announcement
 
-The GSoC organizations were announced on the 27th of February, and while browsing through the list, I found that *for the first time ever* Google DeepMind was participating! For a few days, I kept telling myself not to even think about applying to DeepMind. But eventually, I convinced myself: I’m going to apply. Since I was already contributing to Aeon, I had the confidence that if nothing worked out, I could still submit a solid proposal there—so applying to DeepMind felt like a risk I could afford.
+The GSoC organizations were announced on the 27th of February, and while browsing through the list, I found that *for the first time ever* Google DeepMind was participating! For a few days, I kept telling myself not to even think about applying to DeepMind. But eventually, I convinced myself: I’m going to apply. Since I was already contributing to Aeon, I had the confidence that if nothing worked out, I could still submit a solid proposal there, so applying to DeepMind felt like a risk I could afford.
 
 I had been really interested in working with LLMs over the past couple of months, but for one reason or another, I kept thinking I didn’t know enough to get started. But with the excitement of possibly contributing to DeepMind, I picked up [Hands-On Large Language Models](https://www.llm-book.com/). I got hooked right from the start and ended up finishing the entire book in just a few weeks!
 
@@ -52,19 +52,17 @@ While doing all this, I also started looking through Google DeepMind’s project
 
 ### Proposal submission begins!
 
-By this point, I had a solid understanding of both projects thanks to the books and exploration I’d done. I was confident I could write two strong proposals and now the only thing left was to actually write them. To make them stand out, I decided to build prototypes for each project, giving a MVP of what I was proposing.
+By this point, I had a solid understanding of both the projects, thanks to the books and exploration I did. I was confident I could write two strong proposals and now the only thing left was to actually write them. To make them stand out, I decided to build prototypes for each project, giving a MVP of what I was proposing.
 
 Implementing the prototype for Aeon’s project was straightforward. I had to understand the requirements, read about the existing models, and implement new ones. The tricky part was aligning my implementation with Aeon’s codebase standards. Since I’d be contributing to their actual codebase during GSoC, following their structure was crucial. It showed I wasn’t just familiar with the topic but could also work seamlessly within their ecosystem.
 
 After a few iterations, I built a solid prototype: three deep learning models using Keras, structured according to Aeon’s repository standards. (More technical details are in the proposal.)
 
-Google DeepMind’s prototype, however, was a different story. I’d never fine-tuned a model before, so before I even thought about the UI, I first had to learn how to fine-tune one myself. What sounds easy now was anything but. It took 10+ failed attempts just to wrap my head around what was going on. But that’s also what made me more passionate about the project because I knew exactly how hard it is for beginners, and how valuable a good UI could be. Eventually, I was able to fine-tune a model and understood how things worked behind the scenes—PEFT, LoRA, and all the other core concepts.
+Google DeepMind’s prototype, however, was a different story. I’d never fine-tuned a model before, so before I even thought about the UI, I first had to learn how to fine-tune one myself. What sounds easy now, but it wasn't! It took 10+ failed attempts just to wrap my head around what was going on. But that’s also what made me more passionate about the project because I knew exactly how hard it is for beginners, and how valuable a good UI could be. Eventually, I was able to fine-tune a model and understood how things worked behind the scenes, and technical concepts like PEFT & LoRA.
 
 ![Fine-tuned model screenshot](/images/pre-gsoc/hf-model.jpg)
 
 Then came the UI prototype. My initial choices were Streamlit or Gradio. I went with Streamlit since I had used it before (*spoiler: bad decision*). Streamlit's architecture didn’t suit the needs of the project, its synchronous flow just didn’t work well here. After a few failed attempts and a chat with ChatGPT, I realized Gradio was the better fit with its async support and event-driven design.
-
-After a couple of tries, I was able to finall build a working prototype, that was able to load a dataset, choose a model and tuning parameters, fine tune the model and push it to the hub!
 
 A couple of tries later, I had a working prototype! You could simply load a dataset, choose a model and tuning parameters, fine-tune it, and push it to the Huggingface Hub!
 
@@ -84,9 +82,9 @@ You can check out my project here: [Implementing Web Interface For Fine-Tuning G
 
 **Title**: Implementing web interface for fine-tuning Gemma models using Gradio.
 
-This project is about building a user-friendly web interface using Gradio that makes fine-tuning Gemma models simple and accessible for everyone—even those without deep technical knowledge. The app will allow users to upload datasets in various formats, select from different fine-tuning styles like Alpaca-style, conversational, or continuous pretraining, and choose between efficient LoRA or full fine-tuning based on their needs. Once fine-tuned, users will be able to convert models into formats like PyTorch or GGUF, making them easy to use with tools like Ollama.
+This project is about building a user-friendly web interface using Gradio that makes fine-tuning Gemma models simple and accessible for everyone, even those without deep technical knowledge. The app will allow users to upload datasets in various formats, select from different fine-tuning styles like Alpaca-style, conversational, or continuous pretraining, and choose between efficient LoRA or full fine-tuning based on their needs. Once fine-tuned, users will be able to convert models into formats like PyTorch or GGUF, making them easy to use with tools like Ollama.
 
-The app will also support integration with platforms like Vertex AI, enabling users to fine-tune models without worrying about infrastructure setup. To make the process even smoother, the project will include a set of easy-to-follow guides and documentation—covering everything from model selection to parameter tuning—so that users can make informed decisions at every step. The goal is to remove the complexity from LLM fine-tuning and empower more people to adapt powerful Gemma models for their own use cases.
+The app will also support integration with platforms like Vertex AI, enabling users to fine-tune models without worrying about infrastructure setup. To make the process even smoother, the project will include a set of easy-to-follow guides and documentation, covering everything from model selection to parameter tuning, so that users can make informed decisions at every step. The goal is to remove the complexity from LLM fine-tuning and empower more people to adapt powerful Gemma models for their own use cases.
 
 ### Prototype
 
