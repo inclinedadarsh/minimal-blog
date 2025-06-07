@@ -3,6 +3,7 @@ title: "Nights & Weekends Chronicles: Week 1 - Igniting the Spark of Ideas"
 seoTitle: "Nights & Weekends Chronicles: Week 1 - Igniting the Spark of Ideas"
 seoDescription: "Join me on my N&W S4 journey as I share weekly insights into my project progress, experiences, and the Builspace community!"
 datePublished: 2024-4-15
+tags: ['worklog']
 ---
 
 ## About

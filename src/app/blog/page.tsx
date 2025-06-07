@@ -1,12 +1,15 @@
 import AllBlogs from "@/components/AllBlogs";
 
-export default function BlogListPage() {
+export default async function BlogPage({
+	searchParams,
+}: {
+	searchParams: Promise<{ tag?: string }>;
+}) {
+	const params = await searchParams;
 	return (
-		<div className="md:mt-5">
-			<h1 className="text-2xl font-bold font-title mb-5 md:mb-10 text-foreground">
-				All Blogs
-			</h1>
-			<AllBlogs />
+		<div className="container mx-auto px-4 py-8">
+			<h1 className="text-3xl font-bold mb-8">Blog</h1>
+			<AllBlogs searchParams={params} />
 		</div>
 	);
 }

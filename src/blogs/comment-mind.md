@@ -2,6 +2,7 @@
 title: "Comment Mind - Analyze YouTube Comments and Discover Insights"
 seoTitle: "Comment Mind"
 datePublished: 2023-04-29
+tags: ['project']
 ---
 
 ## Overview

@@ -1,6 +1,7 @@
 ---
 title: "College clubs and events? Are they even worth it?"
 datePublished: 2024-04-11
+tags: ['non-tech']
 ---
 
 I was a member of the organizing team for our department's technical club, and I'd like to share my thoughts on such clubs and events. My name is Adarsh Dubey, and I'm a second-year undergraduate student studying Artificial Intelligence and Data Science at the K. K. Wagh Institute of Engineering Education and Research.

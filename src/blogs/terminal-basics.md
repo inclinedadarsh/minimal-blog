@@ -1,6 +1,7 @@
 ---
 title: "Terminal Basics: A Comprehensive Guide for Beginners"
 datePublished: 2023-03-19
+tags: ['guide']
 ---
 
 ## Introduction to the terminal

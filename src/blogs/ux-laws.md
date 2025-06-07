@@ -3,6 +3,7 @@ title: "UX Design laws every developer should know"
 seoTitle: "UX Design Laws every  Developer should know"
 seoDescription: "In this blog, I talk about 6 UX Design laws that every developer or project maintainer should know. These laws are easy yet very crucial in use."
 datePublished: 2022-11-10
+tags: ['webdev', 'guide']
 ---
 
 ## Introduction

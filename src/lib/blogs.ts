@@ -10,6 +10,7 @@ export interface BlogMetadata {
 	slug: string;
 	seoTitle?: string;
 	seoDescription?: string;
+	tags: string[];
 }
 
 export async function getAllBlogs(): Promise<BlogMetadata[]> {
@@ -32,6 +33,7 @@ export async function getAllBlogs(): Promise<BlogMetadata[]> {
 				datePublished: data.datePublished,
 				seoTitle: data.seoTitle,
 				seoDescription: data.seoDescription,
+				tags: data.tags || [],
 			};
 		}),
 	);
@@ -59,5 +61,24 @@ export async function getBlogBySlug(slug: string) {
 		datePublished: data.datePublished,
 		seoTitle: data.seoTitle,
 		seoDescription: data.seoDescription,
+		tags: data.tags || [],
 	};
+}
+
+// New function to get all unique tags
+export async function getAllTags(): Promise<string[]> {
+	const blogs = await getAllBlogs();
+	const tags = new Set<string>();
+	for (const blog of blogs) {
+		for (const tag of blog.tags) {
+			tags.add(tag);
+		}
+	}
+	return Array.from(tags).sort();
+}
+
+// New function to get blogs by tag
+export async function getBlogsByTag(tag: string): Promise<BlogMetadata[]> {
+	const blogs = await getAllBlogs();
+	return blogs.filter(blog => blog.tags.includes(tag));
 }

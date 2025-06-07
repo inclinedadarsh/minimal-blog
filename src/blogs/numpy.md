@@ -3,6 +3,7 @@ title: "Getting started with NumPy & NumPy Arrays"
 seoTitle: "Getting started with NumPy & NumPy Arrays"
 seoDescription: "Learn how arrays work in NumPy Python Library and how to use them. Explore most common functions in NumPy arrays and learn how to use them as well."
 datePublished: 2023-01-24
+tags: ['ml', 'guide']
 ---
 
 We'll go through the fundamentals of NumPy arrays and other operations that relate to them in this blog. If you work in machine learning, you'll utilize these concepts frequently.

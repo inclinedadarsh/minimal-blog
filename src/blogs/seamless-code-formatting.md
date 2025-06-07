@@ -3,6 +3,7 @@ title: "Seamless Code Formatting: Setup ESLint, Prettier, Husky & Lint-staged fo
 seoTitle: "Effortless Code Formatting: Simplified Setup of ESLint, Prettier, Husk"
 seoDescription: "Discover the seamless way to format your ReactJS code with this comprehensive tutorial. Learn how to set up and configure ESLint, Prettier, Husky, and Lint-"
 datePublished: 2023-07-01
+tags: ['webdev', 'guide']
 ---
 
 ## Why is code formatting important?

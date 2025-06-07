@@ -1,6 +1,7 @@
 ---
 title: "Embracing Syncloop's Simplicity: A Beginner's Journey into Visual API Development"
 datePublished: 2023-07-30
+tags: ['project', 'worklog']
 ---
 
 ## Introduction
