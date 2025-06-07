@@ -1,19 +1,15 @@
 import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
-import { Inter, Inter_Tight } from "next/font/google";
+import { Charis_SIL } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 
-const inter = Inter({
-	variable: "--font-body",
+const charisSil = Charis_SIL({
+	variable: "--font-charis",
 	subsets: ["latin"],
-});
-
-const interTight = Inter_Tight({
-	variable: "--font-heading",
-	subsets: ["latin"],
+	weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {

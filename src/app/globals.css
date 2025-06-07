@@ -4,8 +4,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-	--font-title: "Inter Tight", sans-serif;
-	--font-body: "Inter", sans-serif;
+	--font-title: "Charis SIL", sans-serif;
+	--font-body: "Charis SIL", sans-serif;
 }
 
 @theme inline {
