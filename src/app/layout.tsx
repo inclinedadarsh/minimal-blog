@@ -26,7 +26,7 @@ export default function RootLayout({
 		<html lang="en">
 			<body
 				className={
-					"font-body antialiased max-w-xl px-5 md:px-0 mx-auto"
+					"font-body antialiased max-w-2xl px-5 md:px-0 mx-auto"
 				}
 			>
 				<ThemeProvider
