@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
-import { ThemeColorSelector } from "./ThemeColorSelector";
+// import { ThemeColorSelector } from "./ThemeColorSelector";
 import { ThemeToggle } from "./ThemeToggle";
 
 type NavLink = {
@@ -69,7 +69,7 @@ const Navbar = () => {
 
 				{/* Theme controls */}
 				<div className="flex items-center gap-4">
-					<ThemeColorSelector />
+					{/* <ThemeColorSelector /> */}
 					<ThemeToggle />
 				</div>
 			</div>
