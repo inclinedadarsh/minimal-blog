@@ -13,7 +13,10 @@ const charisSil = Charis_SIL({
 });
 
 export const metadata: Metadata = {
-	title: "Adarsh Dubey's Blog",
+	title: {
+		default: "Adarsh Dubey's Blog",
+		template: "%s | Adarsh Dubey",
+	},
 	description: "Adarsh Dubey's Blog",
 };
 
