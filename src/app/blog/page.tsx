@@ -8,7 +8,7 @@ export default async function BlogPage({
 	const params = await searchParams;
 	return (
 		<div className="container mx-auto md:mt-5">
-			<h1 className="text-2xl font-bold mb-5 md:mb-10">Blogs</h1>
+			<h1 className="text-3xl font-bold mb-5 md:mb-10">Blogs</h1>
 			<AllBlogs searchParams={params} />
 		</div>
 	);
