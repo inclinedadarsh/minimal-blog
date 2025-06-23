@@ -14,7 +14,7 @@ const ExperienceItem = ({
 			href={compnayWebsite}
 			target="_blank"
 			rel="noopener noreferrer"
-			className="flex flex-col sm:flex-row justify-between items-center gap-4 py-4 hover:bg-muted rounded-md hover:px-4 transition-all duration-300"
+			className="flex max-[500px]:flex-col flex-row justify-between max-[500px]:items-start items-center gap-4 py-4 hover:bg-muted rounded-md hover:px-4 transition-all duration-300"
 		>
 			<div className="flex items-center gap-4">
 				<Image
@@ -29,7 +29,7 @@ const ExperienceItem = ({
 					</p>
 				</div>
 			</div>
-			<p className="text-sm md:text-base text-muted-foreground">
+			<p className="text-sm md:text-base text-muted-foreground max-[500px]:self-end">
 				{workDuration}
 			</p>
 		</Link>
