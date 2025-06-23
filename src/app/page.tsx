@@ -1,4 +1,5 @@
 import AllBlogs from "@/components/AllBlogs";
+import Experience from "@/components/Experience";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
@@ -56,6 +57,7 @@ export default function Home() {
 				blogs, and when I'm not lost in code, I'm probably enjoying
 				misal pav.
 			</p>
+			<Experience />
 			<AllBlogs />
 		</main>
 	);
