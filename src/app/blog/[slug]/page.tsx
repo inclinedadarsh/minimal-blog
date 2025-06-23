@@ -35,7 +35,7 @@ export default async function BlogPage({
 
 	return (
 		<article className="prose prose-neutral dark:prose-invert max-w-none mt-5">
-			<h1 className="text-2xl font-bold">{blog.title}</h1>
+			<h1 className="text-3xl font-bold">{blog.title}</h1>
 			<time
 				dateTime={blog.datePublished}
 				className="text-neutral-600 dark:text-neutral-400"

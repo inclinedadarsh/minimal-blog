@@ -1,4 +1,6 @@
 import AllBlogs from "@/components/AllBlogs";
+import Experience from "@/components/Experience";
+import TopBlogs from "@/components/TopBlogs";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
@@ -33,7 +35,7 @@ const links: LinkType[] = [
 export default function Home() {
 	return (
 		<main className="md:mt-5">
-			<h1 className="text-2xl font-bold">Adarsh Dubey</h1>
+			<h1 className="text-3xl font-bold">Adarsh Dubey</h1>
 			<div className="mt-2 text-foreground/80 flex gap-x-4 md:gap-6 flex-wrap">
 				{links.map(link => (
 					<Link
@@ -48,7 +50,7 @@ export default function Home() {
 					</Link>
 				))}
 			</div>
-			<p className="mt-4 text-foreground/80 dark:text-white mb-5 md:mb-10">
+			<p className="mt-4 mb-5 md:mb-10 text-muted-foreground">
 				I'm a web developer and machine learning enthusiast who loves
 				building in public. Currently contributing to Google DeepMind
 				through GSoC '25, and lately, I've been tinkering with LLMs. I
@@ -56,7 +58,8 @@ export default function Home() {
 				blogs, and when I'm not lost in code, I'm probably enjoying
 				misal pav.
 			</p>
-			<AllBlogs />
+			<Experience />
+			<TopBlogs />
 		</main>
 	);
 }
