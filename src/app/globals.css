@@ -4,7 +4,6 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-	--font-title: "Charis SIL", sans-serif;
 	--font-body: "Charis SIL", sans-serif;
 }
 
@@ -137,15 +136,15 @@
 
 	/* Heading styles */
 	.prose h2 {
-		@apply text-2xl font-bold font-title mt-8 mb-4 text-foreground relative;
+		@apply text-2xl font-bold mt-8 mb-4 text-foreground relative;
 	}
 
 	.prose h3 {
-		@apply text-xl font-bold font-title mt-6 mb-3 text-foreground relative;
+		@apply text-xl font-bold mt-6 mb-3 text-foreground relative;
 	}
 
 	.prose h4 {
-		@apply text-lg font-bold font-title mt-4 mb-2 text-foreground relative;
+		@apply text-lg font-bold mt-4 mb-2 text-foreground relative;
 	}
 
 	/* Heading hover effects */

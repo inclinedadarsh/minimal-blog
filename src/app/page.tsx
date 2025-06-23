@@ -33,7 +33,7 @@ const links: LinkType[] = [
 export default function Home() {
 	return (
 		<main className="md:mt-5">
-			<h1 className="text-2xl font-bold font-title">Adarsh Dubey</h1>
+			<h1 className="text-2xl font-bold">Adarsh Dubey</h1>
 			<div className="mt-2 text-foreground/80 flex gap-x-4 md:gap-6 flex-wrap">
 				{links.map(link => (
 					<Link
