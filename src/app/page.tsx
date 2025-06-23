@@ -1,5 +1,6 @@
 import AllBlogs from "@/components/AllBlogs";
 import Experience from "@/components/Experience";
+import TopBlogs from "@/components/TopBlogs";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
@@ -58,7 +59,7 @@ export default function Home() {
 				misal pav.
 			</p>
 			<Experience />
-			<AllBlogs />
+			<TopBlogs />
 		</main>
 	);
 }
