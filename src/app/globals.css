@@ -45,6 +45,7 @@
 	--color-sidebar-ring: var(--sidebar-ring);
 	--color-link: var(--link);
 	--color-link-hover: var(--link-hover);
+	--color-code: var(--code);
 }
 
 :root {
@@ -82,6 +83,7 @@
 	--sidebar-ring: oklch(0.705 0.015 286.067);
 	--link: oklch(0.6122 0.2313 22.61);
 	--link-hover: oklch(0.5178 0.2248 23.97);
+	--code: oklch(0.4165 0.0813 141.49);
 }
 
 .dark {
@@ -118,6 +120,7 @@
 	--sidebar-ring: oklch(0.552 0.016 285.938);
 	--link: oklch(0.7246 0.1377 21.03);
 	--link-hover: oklch(0.7696 0.1135 25.98);
+	--code: oklch(0.9398 0.1072 112.28);
 }
 
 @layer base {
@@ -169,7 +172,7 @@
 
 	/* Link styles */
 	.prose a:not(h1 a, h2 a, h3 a, h4 a, .tags a) {
-		@apply text-link no-underline hover:text-link-hover transition-colors;
+		@apply text-link no-underline hover:text-link-hover transition-colors break-words;
 	}
 
 	/* Heading link styles */
@@ -203,7 +206,7 @@
 
 	/* Inline code styles */
 	.prose code:not(pre code) {
-		@apply rounded bg-neutral-200/50 dark:bg-neutral-800 px-1.5 py-0.5 text-sm text-link;
+		@apply rounded bg-neutral-200/50 dark:bg-neutral-800 px-1.5 py-0.5 text-sm text-code;
 	}
 
 	/* List styles */
