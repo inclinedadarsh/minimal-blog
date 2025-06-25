@@ -1,6 +1,6 @@
 import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
-import { Charis_SIL } from "next/font/google";
+import { Charis_SIL, Fira_Code } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
@@ -10,6 +10,11 @@ const charisSil = Charis_SIL({
 	variable: "--font-charis",
 	subsets: ["latin"],
 	weight: ["400", "700"],
+});
+
+const firaCode = Fira_Code({
+	variable: "--font-fira-code",
+	subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
