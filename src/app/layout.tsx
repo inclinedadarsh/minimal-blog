@@ -18,6 +18,7 @@ const firaCode = Fira_Code({
 });
 
 export const metadata: Metadata = {
+	metadataBase: new URL(process.env.SITE_URL || "http://localhost:3000"),
 	title: {
 		default: "Adarsh Dubey's Blog",
 		template: "%s | Adarsh Dubey",
