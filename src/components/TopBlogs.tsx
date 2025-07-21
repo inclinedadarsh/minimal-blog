@@ -1,28 +1,10 @@
-"use client";
-import type { BlogMetadata } from "@/lib/blogs";
+import { getAllBlogs } from "@/lib/blogs";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
-import { useMemo, useState } from "react";
 
-export default function TopBlogsClient({
-	allBlogs,
-	tags,
-	initialTag = undefined,
-}: {
-	allBlogs: BlogMetadata[];
-	tags: string[];
-	initialTag?: string;
-}) {
-	const [selectedTag, setSelectedTag] = useState<string | undefined>(
-		initialTag,
-	);
-
-	const blogs = useMemo(() => {
-		const filtered = selectedTag
-			? allBlogs.filter(blog => blog.tags.includes(selectedTag))
-			: allBlogs;
-		return filtered.slice(0, 5);
-	}, [allBlogs, selectedTag]);
+export default async function TopBlogs() {
+	const allBlogs = await getAllBlogs();
+	const blogs = allBlogs.slice(0, 5);
 
 	return (
 		<div className="mb-5 md:mb-10">
@@ -35,27 +17,6 @@ export default function TopBlogsClient({
 					<ArrowUpRight size={16} /> all blogs
 				</Link>
 			</div>
-			{tags.length > 0 && (
-				<div className="flex flex-wrap gap-2 mb-4">
-					<button
-						type="button"
-						onClick={() => setSelectedTag(undefined)}
-						className="text-sm px-2 py-1 rounded-md transition-colors bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700"
-					>
-						All
-					</button>
-					{tags.map(t => (
-						<button
-							type="button"
-							key={t}
-							onClick={() => setSelectedTag(t)}
-							className="text-sm px-2 py-1 rounded-md transition-colors bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700"
-						>
-							{t}
-						</button>
-					))}
-				</div>
-			)}
 			<div className="space-y-4">
 				{blogs.map(blog => (
 					<Link
