@@ -1,16 +1,10 @@
-import { getAllBlogs, getAllTags, getBlogsByTag } from "@/lib/blogs";
+import { getAllBlogs } from "@/lib/blogs";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
-export default async function TopBlogs({
-	searchParams = {},
-}: { searchParams?: { tag?: string } }) {
-	const params = await Promise.resolve(searchParams);
-	const tag = params?.tag;
-	const blogs = tag
-		? (await getBlogsByTag(tag)).slice(0, 5)
-		: (await getAllBlogs()).slice(0, 5);
-	const allTags = await getAllTags();
+export default async function TopBlogs() {
+	const allBlogs = await getAllBlogs();
+	const blogs = allBlogs.slice(0, 5);
 
 	return (
 		<div className="mb-5 md:mb-10">
@@ -23,25 +17,6 @@ export default async function TopBlogs({
 					<ArrowUpRight size={16} /> all blogs
 				</Link>
 			</div>
-			{allTags.length > 0 && (
-				<div className="flex flex-wrap gap-2 mb-4">
-					<Link
-						href="/blog"
-						className="text-sm px-2 py-1 rounded-md transition-colors bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700"
-					>
-						All
-					</Link>
-					{allTags.map(t => (
-						<Link
-							key={t}
-							href={`/blog?tag=${t}`}
-							className="text-sm px-2 py-1 rounded-md transition-colors bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700"
-						>
-							{t}
-						</Link>
-					))}
-				</div>
-			)}
 			<div className="space-y-4">
 				{blogs.map(blog => (
 					<Link

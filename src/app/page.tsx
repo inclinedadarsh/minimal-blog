@@ -1,4 +1,3 @@
-import AllBlogs from "@/components/AllBlogs";
 import Experience from "@/components/Experience";
 import TopBlogs from "@/components/TopBlogs";
 import { ArrowUpRight } from "lucide-react";
@@ -32,7 +31,7 @@ const links: LinkType[] = [
 	},
 ];
 
-export default function Home() {
+export default async function Home() {
 	return (
 		<main className="md:mt-5">
 			<h1 className="text-3xl font-bold">Adarsh Dubey</h1>
