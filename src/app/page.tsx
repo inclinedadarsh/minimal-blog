@@ -1,6 +1,6 @@
-import AllBlogs from "@/components/AllBlogs";
 import Experience from "@/components/Experience";
-import TopBlogs from "@/components/TopBlogs";
+import TopBlogsClient from "@/components/TopBlogs";
+import { getAllBlogs, getAllTags } from "@/lib/blogs";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
@@ -32,7 +32,9 @@ const links: LinkType[] = [
 	},
 ];
 
-export default function Home() {
+export default async function Home() {
+	const allBlogs = await getAllBlogs();
+	const tags = await getAllTags();
 	return (
 		<main className="md:mt-5">
 			<h1 className="text-3xl font-bold">Adarsh Dubey</h1>
@@ -59,7 +61,7 @@ export default function Home() {
 				misal pav.
 			</p>
 			<Experience />
-			<TopBlogs />
+			<TopBlogsClient allBlogs={allBlogs} tags={tags} />
 		</main>
 	);
 }

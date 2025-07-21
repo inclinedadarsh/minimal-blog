@@ -1,49 +1,54 @@
-import { getAllBlogs, getAllTags, getBlogsByTag } from "@/lib/blogs";
+"use client";
+import type { BlogMetadata } from "@/lib/blogs";
 import Link from "next/link";
+import { useMemo, useState } from "react";
 
-export default async function AllBlogs({
-	searchParams = {},
+export default function AllBlogsClient({
+	allBlogs,
+	tags,
+	initialTag = undefined,
 }: {
-	searchParams?: { tag?: string };
+	allBlogs: BlogMetadata[];
+	tags: string[];
+	initialTag?: string;
 }) {
-	// Await the entire searchParams object
-	const params = await Promise.resolve(searchParams);
-	const tag = params?.tag;
-	const blogs = tag ? await getBlogsByTag(tag) : await getAllBlogs();
-	const allTags = await getAllTags();
+	const [selectedTag, setSelectedTag] = useState<string | undefined>(
+		initialTag,
+	);
 
-	// Pre-compute tag styles to avoid await in JSX
-	const tagStyles = allTags.map(t => ({
-		tag: t,
-		isActive: tag === t,
-	}));
+	const blogs = useMemo(() => {
+		if (!selectedTag) return allBlogs;
+		return allBlogs.filter(blog => blog.tags.includes(selectedTag));
+	}, [allBlogs, selectedTag]);
 
 	return (
 		<div className="space-y-8">
-			{allTags.length > 0 && (
+			{tags.length > 0 && (
 				<div className="flex flex-wrap gap-2">
-					<Link
-						href="/blog"
+					<button
+						type="button"
+						onClick={() => setSelectedTag(undefined)}
 						className={`text-sm px-2 py-1 rounded-md transition-colors ${
-							!tag
+							!selectedTag
 								? "bg-neutral-900 text-white dark:bg-white dark:text-black"
 								: "bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700"
 						}`}
 					>
 						All
-					</Link>
-					{tagStyles.map(({ tag: t, isActive }) => (
-						<Link
+					</button>
+					{tags.map(t => (
+						<button
+							type="button"
 							key={t}
-							href={`/blog?tag=${t}`}
+							onClick={() => setSelectedTag(t)}
 							className={`text-sm px-2 py-1 rounded-md transition-colors ${
-								isActive
+								selectedTag === t
 									? "bg-neutral-900 text-white dark:bg-white dark:text-black"
 									: "bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700"
 							}`}
 						>
 							{t}
-						</Link>
+						</button>
 					))}
 				</div>
 			)}

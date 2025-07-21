@@ -4,14 +4,14 @@ import matter from "gray-matter";
 
 const blogsDirectory = path.join(process.cwd(), "src/blogs");
 
-export interface BlogMetadata {
+export type BlogMetadata = {
 	title: string;
 	datePublished: string;
 	slug: string;
 	seoTitle?: string;
 	seoDescription?: string;
 	tags: string[];
-}
+};
 
 export async function getAllBlogs(): Promise<BlogMetadata[]> {
 	const fileNames = await fs.readdir(blogsDirectory);
