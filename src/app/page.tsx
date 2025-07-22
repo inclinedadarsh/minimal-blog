@@ -53,9 +53,8 @@ export default async function Home() {
 				I'm a web developer and machine learning enthusiast who loves
 				building in public. Currently contributing to Google DeepMind
 				through GSoC '25, and lately, I've been tinkering with LLMs. I
-				speak at local tech meetups, write technical and non-technical
-				blogs, and when I'm not lost in code, I'm probably enjoying
-				misal pav.
+				speak at local tech meetups, write technical blogs, and when I'm
+				not lost in code, I'm probably enjoying misal pav.
 			</p>
 			<Experience />
 			<TopBlogs />
