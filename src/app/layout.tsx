@@ -1,13 +1,13 @@
 import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
-import { Charis_SIL, Fira_Code } from "next/font/google";
+import { Fira_Code, Libre_Baskerville } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 
-const charisSil = Charis_SIL({
-	variable: "--font-charis",
+const libreBaskerville = Libre_Baskerville({
+	variable: "--font-libre-baskerville",
 	subsets: ["latin"],
 	weight: ["400", "700"],
 });

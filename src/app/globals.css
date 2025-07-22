@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-	--font-body: "Charis SIL", sans-serif;
+	--font-body: "Libre Baskerville", serif;
 	--font-mono: "Fira Code", monospace;
 }
 
