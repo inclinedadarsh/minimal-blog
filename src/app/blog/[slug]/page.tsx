@@ -38,7 +38,7 @@ export default async function BlogPage({
 			<h1 className="text-3xl font-bold">{blog.title}</h1>
 			<time
 				dateTime={blog.datePublished}
-				className="text-neutral-600 dark:text-neutral-400"
+				className="text-neutral-600 dark:text-neutral-400 mt-3 block"
 			>
 				{new Date(blog.datePublished).toLocaleDateString("en-US", {
 					year: "numeric",
