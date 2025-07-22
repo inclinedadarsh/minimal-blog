@@ -21,7 +21,7 @@ const experienceItems: ExperienceItemType[] = [
 
 const Experience = () => {
 	return (
-		<div className="mb-5 md:mb-10">
+		<div className="mb-5 md:mb-10 space-y-3">
 			<h2 className="text-2xl font-bold">Career highlights</h2>
 			<div className="">
 				{experienceItems.map(item => (

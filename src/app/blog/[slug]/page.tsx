@@ -52,7 +52,7 @@ export default async function BlogPage({
 						<Link
 							key={tag}
 							href={`/blog?tag=${tag}`}
-							className="text-sm px-2 py-1 bg-neutral-100 dark:bg-neutral-800 rounded-md hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors"
+							className="text-sm px-2 py-1 bg-muted/0 outline-2 outline-muted dark:bg-neutral-800 dark:outline-neutral-800 rounded-md hover:bg-muted dark:hover:bg-neutral-700 transition-colors"
 						>
 							{tag}
 						</Link>

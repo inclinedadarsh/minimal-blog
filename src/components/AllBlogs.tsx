@@ -31,7 +31,7 @@ export default function AllBlogsClient({
 						className={`text-sm px-2 py-1 rounded-md transition-colors ${
 							!selectedTag
 								? "bg-neutral-900 text-white dark:bg-white dark:text-black"
-								: "bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700"
+								: "bg-muted/0 outline-2 outline-muted dark:bg-neutral-800 dark:outline-neutral-800 hover:bg-muted dark:hover:bg-neutral-700"
 						}`}
 					>
 						All
@@ -44,7 +44,7 @@ export default function AllBlogsClient({
 							className={`text-sm px-2 py-1 rounded-md transition-colors ${
 								selectedTag === t
 									? "bg-neutral-900 text-white dark:bg-white dark:text-black"
-									: "bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700"
+									: "bg-muted/0 outline-2 outline-muted dark:bg-neutral-800 dark:outline-neutral-800 hover:bg-muted dark:hover:bg-neutral-700"
 							}`}
 						>
 							{t}
