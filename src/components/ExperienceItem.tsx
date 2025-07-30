@@ -14,13 +14,13 @@ const ExperienceItem = ({
 			href={compnayWebsite}
 			target="_blank"
 			rel="noopener noreferrer"
-			className="flex max-[500px]:flex-col flex-row justify-between max-[500px]:items-start items-center gap-4 py-4 hover:bg-muted rounded-md hover:px-4 transition-all duration-300"
+			className="flex max-[500px]:flex-col flex-row justify-between max-[500px]:items-start items-center gap-4 py-4 rounded-md group"
 		>
 			<div className="flex items-center gap-4">
 				<Image
 					src={companyLogo}
 					alt={companyName}
-					className="w-10 h-10 border border-border rounded-full"
+					className="w-10 h-10 border border-border rounded-full group-hover:scale-110 transition-all duration-300"
 				/>
 				<div className="flex flex-col">
 					<h3 className="font-bold text-lg">{companyName}</h3>
