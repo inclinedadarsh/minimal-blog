@@ -1,15 +1,14 @@
 import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
-import { Fira_Code, Libre_Baskerville } from "next/font/google";
+import { Fira_Code, Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 
-const libreBaskerville = Libre_Baskerville({
-	variable: "--font-libre-baskerville",
+const inter = Inter({
+	variable: "--font-inter",
 	subsets: ["latin"],
-	weight: ["400", "700"],
 });
 
 const firaCode = Fira_Code({
