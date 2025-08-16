@@ -7,3 +7,8 @@ export type ExperienceItemType = {
 	workDuration: string;
 	compnayWebsite: string;
 };
+
+export type TechnologyItemType = {
+	name: string;
+	logo: StaticImageData;
+};
