@@ -1,4 +1,4 @@
-import { deepmindLogo, wemakedevsLogo } from "@/assets";
+import { deepmindLogo, wemakedevsLogo } from "@/assets/companies";
 import type { ExperienceItemType } from "@/types";
 import ExperienceItem from "./ExperienceItem";
 
