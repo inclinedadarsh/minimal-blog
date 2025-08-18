@@ -5,6 +5,7 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "@/components/ui/sonner";
 
 const inter = Inter({
 	variable: "--font-inter",
@@ -46,6 +47,7 @@ export default function RootLayout({
 					<Navbar />
 					{children}
 					<Footer />
+					<Toaster richColors />
 				</ThemeProvider>
 			</body>
 			{/* biome-ignore lint/style/noNonNullAssertion: <explanation> */}

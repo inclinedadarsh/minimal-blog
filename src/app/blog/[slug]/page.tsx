@@ -1,3 +1,4 @@
+import Subscribe from "@/components/Subscribe";
 import { getAllBlogs, getBlogBySlug } from "@/lib/blogs";
 import { compileMDXWithOptions } from "@/lib/mdx";
 import type { Metadata } from "next";
@@ -61,6 +62,8 @@ export default async function BlogPage({
 			)}
 			<hr className="my-6 border-neutral-200 dark:border-neutral-800" />
 			<div className="mt-8">{content}</div>
+			<hr className="my-6 border-neutral-200 dark:border-neutral-800" />
+			<Subscribe slug={slug} />
 		</article>
 	);
 }
