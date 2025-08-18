@@ -1,7 +1,12 @@
 import {
+	awsLogo,
 	bunLogo,
 	claudeLogo,
 	cppLogo,
+	dockerLogo,
+	fastapiLogo,
+	gcpLogo,
+	geminiLogo,
 	gitLogo,
 	huggingFaceLogo,
 	kerasLogo,
@@ -53,12 +58,32 @@ const technologies: TechnologyItemType[] = [
 		logo: bunLogo,
 	},
 	{
-		name: "Git",
-		logo: gitLogo,
+		name: "FastAPI",
+		logo: fastapiLogo,
 	},
 	{
 		name: "PostgreSQL",
 		logo: postgreLogo,
+	},
+	{
+		name: "Git",
+		logo: gitLogo,
+	},
+	{
+		name: "AWS",
+		logo: awsLogo,
+	},
+	{
+		name: "GCP",
+		logo: gcpLogo,
+	},
+	{
+		name: "Docker",
+		logo: dockerLogo,
+	},
+	{
+		name: "Gemini",
+		logo: geminiLogo,
 	},
 	{
 		name: "Claude",
