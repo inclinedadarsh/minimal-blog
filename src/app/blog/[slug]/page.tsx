@@ -1,6 +1,7 @@
 import Subscribe from "@/components/Subscribe";
 import { getAllBlogs, getBlogBySlug } from "@/lib/blogs";
 import { compileMDXWithOptions } from "@/lib/mdx";
+import { DivideIcon } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -35,35 +36,37 @@ export default async function BlogPage({
 	const { content } = await compileMDXWithOptions(blog.content);
 
 	return (
-		<article className="prose prose-neutral dark:prose-invert max-w-none mt-5">
-			<h1 className="text-3xl font-bold">{blog.title}</h1>
-			<time
-				dateTime={blog.datePublished}
-				className="text-neutral-600 dark:text-neutral-400 mt-3 block"
-			>
-				{new Date(blog.datePublished).toLocaleDateString("en-US", {
-					year: "numeric",
-					month: "long",
-					day: "numeric",
-				})}
-			</time>
-			{blog.tags.length > 0 && (
-				<div className="flex gap-2 mt-3 tags">
-					{blog.tags.map((tag: string) => (
-						<Link
-							key={tag}
-							href={`/blog?tag=${tag}`}
-							className="text-sm px-2 py-1 bg-muted/0 outline-2 outline-muted dark:bg-neutral-800 dark:outline-neutral-800 rounded-md hover:bg-muted dark:hover:bg-neutral-700 transition-colors"
-						>
-							{tag}
-						</Link>
-					))}
-				</div>
-			)}
-			<hr className="my-6 border-neutral-200 dark:border-neutral-800" />
-			<div className="mt-8">{content}</div>
-			<hr className="my-6 border-neutral-200 dark:border-neutral-800" />
-			<Subscribe slug={slug} />
-		</article>
+		<div className="">
+			<article className="prose prose-neutral dark:prose-invert max-w-none mt-5">
+				<h1 className="text-3xl font-bold">{blog.title}</h1>
+				<time
+					dateTime={blog.datePublished}
+					className="text-neutral-600 dark:text-neutral-400 mt-3 block"
+				>
+					{new Date(blog.datePublished).toLocaleDateString("en-US", {
+						year: "numeric",
+						month: "long",
+						day: "numeric",
+					})}
+				</time>
+				{blog.tags.length > 0 && (
+					<div className="flex gap-2 mt-3 tags">
+						{blog.tags.map((tag: string) => (
+							<Link
+								key={tag}
+								href={`/blog?tag=${tag}`}
+								className="text-sm px-2 py-1 bg-muted/0 outline-2 outline-muted dark:bg-neutral-800 dark:outline-neutral-800 rounded-md hover:bg-muted dark:hover:bg-neutral-700 transition-colors"
+							>
+								{tag}
+							</Link>
+						))}
+					</div>
+				)}
+				<hr className="my-6 border-neutral-200 dark:border-neutral-800" />
+				<div className="mt-8">{content}</div>
+				<hr className="my-6 border-neutral-200 dark:border-neutral-800" />
+			</article>
+			<Subscribe slug={slug} page="Blog" />
+		</div>
 	);
 }

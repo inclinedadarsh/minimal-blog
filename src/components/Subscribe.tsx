@@ -1,5 +1,6 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import { useState } from "react";
 import { toast } from "sonner";
 import { z } from "zod";
@@ -7,7 +8,7 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 
-const Subscribe = ({ slug }: { slug: string }) => {
+const Subscribe = ({ slug, page }: { slug: string; page: "Home" | "Blog" }) => {
 	const [email, setEmail] = useState("");
 	const [name, setName] = useState("");
 	const [isLoading, setIsLoading] = useState(false);
@@ -88,13 +89,27 @@ const Subscribe = ({ slug }: { slug: string }) => {
 	};
 
 	return (
-		<div className="mt-8">
-			<p className="text-xl font-bold">Like what you read?</p>
-			<p className="">
+		<div className="mt-8" id="subscribe">
+			<h2
+				className={cn(
+					"mb-4",
+					page === "Home" && "text-2xl font-bold",
+					page === "Blog" && "text-xl font-bold",
+				)}
+			>
+				{page === "Home" ? "Stay connected" : "Like what you read?"}
+			</h2>
+			<p
+				className={cn(
+					"mb-4",
+					page === "Home" && "text-muted-foreground",
+					page === "Blog" && "",
+				)}
+			>
 				You can put in your email below to get notified when I publish
 				new blogs. No spam, promise :D
 			</p>
-			<div className="grid grid-cols-1 md:grid-cols-2 gap-2 mt-2">
+			<div className="grid grid-cols-1 md:grid-cols-2 gap-2">
 				<div className="flex flex-col gap-2">
 					<Label htmlFor="email">Email</Label>
 					<Input

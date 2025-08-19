@@ -1,4 +1,5 @@
 import Experience from "@/components/Experience";
+import Subscribe from "@/components/Subscribe";
 import Technologies from "@/components/Technologies";
 import TopBlogs from "@/components/TopBlogs";
 import { ArrowUpRight } from "lucide-react";
@@ -60,6 +61,7 @@ export default async function Home() {
 			<Experience />
 			<TopBlogs />
 			<Technologies />
+			<Subscribe slug="home" page="Home" />
 		</main>
 	);
 }
