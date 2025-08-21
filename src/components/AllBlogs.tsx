@@ -1,20 +1,28 @@
 "use client";
 import type { BlogMetadata } from "@/lib/blogs";
-import { useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
+import { useEffect, useMemo, useState } from "react";
 import BlogItem from "./BlogItem";
 
 export default function AllBlogsClient({
 	allBlogs,
 	tags,
-	initialTag = undefined,
 }: {
 	allBlogs: BlogMetadata[];
 	tags: string[];
-	initialTag?: string;
 }) {
+	const searchParams = useSearchParams();
 	const [selectedTag, setSelectedTag] = useState<string | undefined>(
-		initialTag,
+		undefined,
 	);
+
+	// Read the tag from URL on component mount
+	useEffect(() => {
+		const tagFromUrl = searchParams.get("tag");
+		if (tagFromUrl) {
+			setSelectedTag(tagFromUrl);
+		}
+	}, [searchParams]);
 
 	const blogs = useMemo(() => {
 		if (!selectedTag) return allBlogs;
