@@ -119,8 +119,8 @@
 	--sidebar-accent-foreground: oklch(0.985 0 0);
 	--sidebar-border: oklch(1 0 0 / 10%);
 	--sidebar-ring: oklch(0.552 0.016 285.938);
-	--link: oklch(0.7246 0.1377 21.03);
-	--link-hover: oklch(0.7696 0.1135 25.98);
+	--link: oklch(0.765 0.177 163.223);
+	--link-hover: oklch(0.7004 0.177 163.223);
 	--code: oklch(0.8163 0.0896 243.62);
 }
 
