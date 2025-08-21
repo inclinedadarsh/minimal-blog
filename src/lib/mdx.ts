@@ -53,6 +53,52 @@ const rehypeExternalLinks = () => {
 	};
 };
 
+// Plugin to wrap table elements with a div wrapper
+const rehypeTableWrapper = () => {
+	return (tree: Root) => {
+		const visit = (node: Element) => {
+			if (node.type === "element" && node.tagName === "table") {
+				// Create a wrapper div with class 'table-wrapper'
+				const wrapper: Element = {
+					type: "element",
+					tagName: "div",
+					properties: { className: "table-wrapper" },
+					children: [node],
+				};
+
+				// Replace the table node with the wrapper
+				// We need to find the parent and replace the child
+				return wrapper;
+			}
+
+			if (node.children) {
+				for (let i = 0; i < node.children.length; i++) {
+					const child = node.children[i];
+					if (child.type === "element") {
+						const result = visit(child);
+						if (result && result !== child) {
+							// Replace the child with the wrapped result
+							node.children[i] = result;
+						}
+					}
+				}
+			}
+			return node;
+		};
+
+		for (let i = 0; i < tree.children.length; i++) {
+			const child = tree.children[i];
+			if (child.type === "element") {
+				const result = visit(child);
+				if (result && result !== child) {
+					tree.children[i] = result;
+				}
+			}
+		}
+		return tree;
+	};
+};
+
 export async function compileMDXWithOptions(source: string) {
 	return compileMDX({
 		source,
@@ -65,6 +111,7 @@ export async function compileMDXWithOptions(source: string) {
 					[rehypeAutolinkHeadings, { behavior: "wrap" }],
 					[rehypePrettyCode, prettyCodeOptions],
 					rehypeExternalLinks,
+					rehypeTableWrapper,
 				],
 			},
 		},
