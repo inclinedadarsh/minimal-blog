@@ -1,7 +1,9 @@
 import Subscribe from "@/components/Subscribe";
+import { buttonVariants } from "@/components/ui/button";
 import { getAllBlogs, getBlogBySlug } from "@/lib/blogs";
 import { compileMDXWithOptions } from "@/lib/mdx";
-import { DivideIcon } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { ArrowUpRight } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -63,7 +65,27 @@ export default async function BlogPage({
 					</div>
 				)}
 				<hr className="my-6 border-neutral-200 dark:border-neutral-800" />
-				<div className="mt-8">{content}</div>
+				{blog.notebookLM && (
+					<div className="p-4 border border-border rounded-md space-y-2">
+						<p className="font-medium">
+							Don't feel like reading? Hit play and enjoy this
+							blog in a podcast-style audio.
+						</p>
+						<Link
+							href={blog.notebookLM}
+							className={cn(
+								buttonVariants({
+									variant: "outline",
+								}),
+							)}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Listen on NotebookLM <ArrowUpRight />
+						</Link>
+					</div>
+				)}
+				<div className="mt-6">{content}</div>
 				<hr className="my-6 border-neutral-200 dark:border-neutral-800" />
 			</article>
 			<Subscribe slug={slug} page="Blog" />

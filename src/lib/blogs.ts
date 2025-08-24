@@ -11,6 +11,7 @@ export type BlogMetadata = {
 	seoTitle?: string;
 	seoDescription?: string;
 	tags: string[];
+	notebookLM?: string;
 };
 
 export async function getAllBlogs(): Promise<BlogMetadata[]> {
@@ -34,6 +35,7 @@ export async function getAllBlogs(): Promise<BlogMetadata[]> {
 				seoTitle: data.seoTitle,
 				seoDescription: data.seoDescription,
 				tags: data.tags || [],
+				notebookLM: data.notebookLM,
 			};
 		}),
 	);
@@ -62,6 +64,7 @@ export async function getBlogBySlug(slug: string) {
 		seoTitle: data.seoTitle,
 		seoDescription: data.seoDescription,
 		tags: data.tags || [],
+		notebookLM: data.notebookLM || "",
 	};
 }
 
