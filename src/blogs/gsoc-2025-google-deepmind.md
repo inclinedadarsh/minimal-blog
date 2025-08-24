@@ -4,6 +4,7 @@ datePublished: 2025-05-14
 seoTitle: "Landing GSoC 2025 with Google DeepMind"
 seoDescription: "Discover how I navigated the journey to securing a project with Google DeepMind for GSoC 2025. In this blog, I share my background, the steps I took in preparation, the challenges I faced, and how I made it through the application process. From learning new skills to working on prototypes, this is the first chapter of my GSoC experience."
 tags: ['gsoc', 'ml', 'worklog', 'guide']
+notebookLM: "https://notebooklm.google.com/notebook/c7ce19c0-f379-4874-9421-3f5dd009e9de?artifactId=2e566fd9-f898-4704-91fc-7a077e9ee2f9"
 ---
 
 Hey everyone 👋,

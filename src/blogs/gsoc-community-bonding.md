@@ -4,6 +4,7 @@ datePublished: 2025-06-02
 seoTitle: "Meeting My GSoC Peers at Google DeepMind"
 seoDescription: "Getting to know my fellow GSoC contributors at Google DeepMind, from robot dog builders to ML researchers. Here's what happened during community bonding and why I'm excited about the people I'll be working with this summer."
 tags: ['gsoc', 'worklog']
+notebookLM: "https://notebooklm.google.com/notebook/5141f194-2982-4e2c-9f6a-a817dda0a6f1?artifactId=16f3f17d-7fa6-4ab4-8c8f-bba626e9c5fc"
 ---
 
 Hey everyone! 👋

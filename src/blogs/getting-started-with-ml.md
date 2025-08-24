@@ -4,6 +4,7 @@ datePublished: 2025-01-28
 seoTitle: "Getting Started with Machine Learning: A Beginner's Guide"
 seoDescription: "A comprehensive guide for beginners looking to start their machine learning journey, covering prerequisites, recommended resources, and learning paths."
 tags: ['ml', 'guide']
+notebookLM: "https://notebooklm.google.com/notebook/19218ae5-46d9-4f73-bbd0-7943e68930b5?artifactId=c653e9f1-c898-4ddb-9797-50e76459ce88"
 ---
 
 Hey there 👋🏽,

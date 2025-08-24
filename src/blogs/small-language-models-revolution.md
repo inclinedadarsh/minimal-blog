@@ -4,6 +4,7 @@ datePublished: 2025-08-22
 seoTitle: "The Small Language Model Revolution You're Probably Missing"
 seoDescription: "How 270M parameter models are enabling crazy AI experiments on basic laptops. Explore the latest releases and why they're perfect for building AI agents that actually work."
 tags: ['ml']
+notebookLM: "https://notebooklm.google.com/notebook/fd94731b-449c-458e-b827-fa4d28a81535?artifactId=ca35fd94-67fb-4683-a29e-eb20456a8bc5"
 ---
 
 Hey everyone 👋,

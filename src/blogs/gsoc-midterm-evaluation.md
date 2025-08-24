@@ -4,6 +4,7 @@ datePublished: 2025-07-24
 seoTitle: "GSoC Midterm Updates, Mistakes and Future Plans"
 seoDescription: "Discover how my GSoC project is making AI fine-tuning accessible to everyone. Learn about our progress, challenges, and plans for the future."
 tags: ['gsoc', 'project']
+notebookLM: "https://notebooklm.google.com/notebook/d354ae7e-557f-4faf-82e4-b0f51bf20905?artifactId=f01863c1-cd65-4225-9435-2dd6137dc914"
 ---
 
 ![Jinko: Zero-barrier finetuning for open-source language models.](/images/gsoc-midterm-evaluation/jinko.webp)

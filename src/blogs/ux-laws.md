@@ -4,6 +4,7 @@ seoTitle: "UX Design Laws every  Developer should know"
 seoDescription: "In this blog, I talk about 6 UX Design laws that every developer or project maintainer should know. These laws are easy yet very crucial in use."
 datePublished: 2022-11-10
 tags: ['webdev', 'guide']
+notebookLM: "https://notebooklm.google.com/notebook/5b0058b3-4fea-402f-aacf-26cc281bdfcd?artifactId=00f9490c-ad28-43b4-989e-03ba8fd9f7bb"
 ---
 
 ## Introduction
