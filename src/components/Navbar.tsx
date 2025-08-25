@@ -23,6 +23,11 @@ const navLinks: NavLink[] = [
 		href: "/blog",
 	},
 	{
+		label: "reading list",
+		href: "https://readinglist.adarshdubey.com",
+		openInNewTab: true,
+	},
+	{
 		label: "website",
 		href: "https://adarshdubey.com",
 		openInNewTab: true,
