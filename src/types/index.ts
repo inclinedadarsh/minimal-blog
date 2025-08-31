@@ -21,3 +21,10 @@ export type LinkType = {
 	href: string;
 	openInNewTab?: boolean;
 };
+
+export type ProjectItemType = {
+	name: string;
+	description: string;
+	links: LinkType[];
+	technologies?: TechnologyNameType[];
+};

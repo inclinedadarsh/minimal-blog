@@ -18,7 +18,12 @@ import {
 	reactLogo,
 	typescriptLogo,
 } from "@/assets/technologies";
-import type { ExperienceItemType, LinkType, TechnologyType } from "@/types";
+import type {
+	ExperienceItemType,
+	LinkType,
+	ProjectItemType,
+	TechnologyType,
+} from "@/types";
 
 export const TECHNOLOGIES = {
 	python: {
@@ -140,5 +145,79 @@ export const NAV_LINKS: LinkType[] = [
 		label: "reading list",
 		href: "https://readinglist.adarshdubey.com",
 		openInNewTab: true,
+	},
+];
+
+export const PROJECTS: ProjectItemType[] = [
+	{
+		name: "Facet: Gemma Finetuner",
+		description:
+			"An end-to-end platform that lets users preprocess datasets, fine-tune Gemma models, run inference, and export them in GGUF format, making model training and deployment simple and accessible.",
+		links: [
+			{
+				label: "github",
+				href: "https://github.com/gemma-facet",
+				openInNewTab: true,
+			},
+		],
+		technologies: [
+			"python",
+			"fastapi",
+			"huggingFace",
+			"docker",
+			"gcp",
+			"nextjs",
+		],
+	},
+	{
+		name: "Anon: Anonymous social media forum",
+		description:
+			"Anon Forum is a fully anonymous social platform for college students that enables posting, deleting, upvoting via an optimistic UI, and ensures anonymity through college verification with no personal data storage.",
+		links: [
+			{
+				label: "github",
+				href: "https://github.com/inclinedadarsh/anon",
+				openInNewTab: true,
+			},
+			{
+				label: "demo",
+				href: "https://anon.adarshdubey.com",
+				openInNewTab: true,
+			},
+		],
+		technologies: [
+			"nextjs",
+			"fastapi",
+			"aws",
+			"postgresql",
+			"typescript",
+			"bun",
+		],
+	},
+	{
+		name: "Inclinet: Neural network library",
+		description:
+			"Built a neural network library from scratch in Python with PyTorch-like APIs, supporting multiple activation functions, losses, and optimizers, designed using OOP principles for clarity, flexibility, and maintainability.",
+		links: [
+			{
+				label: "github",
+				href: "https://github.com/inclinedadarsh/inclinet",
+				openInNewTab: true,
+			},
+		],
+		technologies: ["python"],
+	},
+	{
+		name: "Incligrad: Autograd engine in C++",
+		description:
+			"Implemented a PyTorch-like autograd library in C++ from scratch, including full backpropagation logic, enabling gradient-based learning without relying on existing frameworks.",
+		links: [
+			{
+				label: "github",
+				href: "https://github.com/inclinedadarsh/incligrad",
+				openInNewTab: true,
+			},
+		],
+		technologies: ["cpp"],
 	},
 ];
