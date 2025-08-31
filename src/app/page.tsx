@@ -1,40 +1,18 @@
 import Experience from "@/components/Experience";
+import Projects from "@/components/Projects";
 import Subscribe from "@/components/Subscribe";
 import Technologies from "@/components/Technologies";
 import TopBlogs from "@/components/TopBlogs";
+import { HEADER_LINKS } from "@/constants";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
-
-type LinkType = {
-	label: string;
-	href: string;
-};
-
-const links: LinkType[] = [
-	{
-		label: "twitter",
-		href: "https://x.com/inclinedadarsh",
-	},
-	{
-		label: "github",
-		href: "https://github.com/inclinedadarsh",
-	},
-	{
-		label: "linkedin",
-		href: "https://linkedin.com/in/dubeyadarsh/",
-	},
-	{
-		label: "cal.com",
-		href: "https://cal.com/adarshdubey",
-	},
-];
 
 export default async function Home() {
 	return (
 		<main className="md:mt-5">
 			<h1 className="text-3xl font-bold">Adarsh Dubey</h1>
 			<div className="mt-2 text-foreground/80 flex gap-x-4 md:gap-6 flex-wrap">
-				{links.map(link => (
+				{HEADER_LINKS.map(link => (
 					<Link
 						key={link.label}
 						href={link.href}
@@ -55,6 +33,7 @@ export default async function Home() {
 				not lost in code, I'm probably enjoying misal pav.
 			</p>
 			<Experience />
+			<Projects />
 			<TopBlogs />
 			<Technologies />
 			<Subscribe slug="home" page="Home" />

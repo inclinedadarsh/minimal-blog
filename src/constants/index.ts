@@ -1,3 +1,4 @@
+import { deepmindLogo, wemakedevsLogo } from "@/assets/companies";
 import {
 	awsLogo,
 	bunLogo,
@@ -17,7 +18,7 @@ import {
 	reactLogo,
 	typescriptLogo,
 } from "@/assets/technologies";
-import type { TechnologyType } from "@/types";
+import type { ExperienceItemType, LinkType, TechnologyType } from "@/types";
 
 export const TECHNOLOGIES = {
 	python: {
@@ -89,3 +90,55 @@ export const TECHNOLOGIES = {
 		logo: claudeLogo,
 	},
 } satisfies Record<string, TechnologyType>;
+
+export const EXPERIENCE_ITEMS: ExperienceItemType[] = [
+	{
+		companyName: "Google DeepMind",
+		companyLogo: deepmindLogo,
+		workTitle: "GSoC '25 contributor",
+		workDuration: "May 2025 — Aug 2025",
+		compnayWebsite: "https://deepmind.google",
+	},
+	{
+		companyName: "WeMakeDevs",
+		companyLogo: wemakedevsLogo,
+		workTitle: "Web developer & core team member",
+		workDuration: "2023 — Present",
+		compnayWebsite: "https://wemakedevs.org",
+	},
+];
+
+export const HEADER_LINKS: LinkType[] = [
+	{
+		label: "twitter",
+		href: "https://x.com/inclinedadarsh",
+	},
+	{
+		label: "github",
+		href: "https://github.com/inclinedadarsh",
+	},
+	{
+		label: "linkedin",
+		href: "https://linkedin.com/in/dubeyadarsh/",
+	},
+	{
+		label: "cal.com",
+		href: "https://cal.com/adarshdubey",
+	},
+];
+
+export const NAV_LINKS: LinkType[] = [
+	{
+		label: "home",
+		href: "/",
+	},
+	{
+		label: "blogs",
+		href: "/blog",
+	},
+	{
+		label: "reading list",
+		href: "https://readinglist.adarshdubey.com",
+		openInNewTab: true,
+	},
+];

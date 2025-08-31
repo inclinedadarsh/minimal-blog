@@ -15,3 +15,9 @@ export type TechnologyType = {
 };
 
 export type TechnologyNameType = keyof typeof TECHNOLOGIES;
+
+export type LinkType = {
+	label: string;
+	href: string;
+	openInNewTab?: boolean;
+};

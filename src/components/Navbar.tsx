@@ -1,33 +1,12 @@
 "use client";
 
+import { NAV_LINKS } from "@/constants";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 // import { ThemeColorSelector } from "./ThemeColorSelector";
 import { ThemeToggle } from "./ThemeToggle";
-
-type NavLink = {
-	label: string;
-	href: string;
-	openInNewTab?: boolean;
-};
-
-const navLinks: NavLink[] = [
-	{
-		label: "home",
-		href: "/",
-	},
-	{
-		label: "blogs",
-		href: "/blog",
-	},
-	{
-		label: "reading list",
-		href: "https://readinglist.adarshdubey.com",
-		openInNewTab: true,
-	},
-];
 
 const Navbar = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -47,7 +26,7 @@ const Navbar = () => {
 
 				{/* Desktop navigation */}
 				<ul className="hidden md:flex gap-5 md:gap-7">
-					{navLinks.map(link => (
+					{NAV_LINKS.map(link => (
 						<li key={link.label}>
 							<Link
 								className={cn(
@@ -84,7 +63,7 @@ const Navbar = () => {
 				)}
 			>
 				<ul className="flex flex-col gap-4">
-					{navLinks.map(link => (
+					{NAV_LINKS.map(link => (
 						<li key={link.label}>
 							<Link
 								className={cn(
