@@ -11,7 +11,7 @@ Hey everyone! 👋
 
 Most of you probably already know me if you're reading this, but for those who don't - I'm Adarsh and I got selected for Google DeepMind's program this year. This blog series is all about my GSoC '25 journey. Think of it as my weekly worklog where I'll share what I've been working on, what's still left to do, and what I'm planning for the next week.
 
-Following up from my [previous blog](https://blog.adarshdubey.com/blog/gsoc-2025-google-deepmind), this one's about the community bonding period. The community bonding period ran from May 8 to June 1, so almost a full month. However, I didn't get to code anything during this time because I had my 6th semester engineering exams going on.
+Following up from my [previous blog](https://adarshdubey.com/blog/gsoc-2025-google-deepmind), this one's about the community bonding period. The community bonding period ran from May 8 to June 1, so almost a full month. However, I didn't get to code anything during this time because I had my 6th semester engineering exams going on.
 
 ## People I'm working with
 

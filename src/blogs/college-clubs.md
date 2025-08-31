@@ -36,6 +36,6 @@ The short answer is 'yes'! If you have never been a part of any college club, th
 
 If you have the time and energy to participate in a college club, I strongly encourage you to do so. I know this blog post may seem obvious and different from my usual technical content, but I wanted to write it for those who may feel like college clubs are not worth the effort - a feeling that I used to have myself.
 
-If you enjoy reading this blog or would like to read more technical blogs, please subscribe to my [newsletter](https://blog.adarshdubey.com/newsletter). Additionally, I am currently very active on [Twitter](https://twitter.com/inclinedadarsh), so you can follow me there as well. You can find all other relevant links on my [bento](https://bento.me/adarsh).
+If you enjoy reading this blog or would like to read more technical blogs, please subscribe to my [newsletter](https://adarshdubey.com). Additionally, I am currently very active on [Twitter](https://twitter.com/inclinedadarsh), so you can follow me there as well. You can find all other relevant links on my [bento](https://bento.me/adarsh).
 
 Thank you for reading. See you later!

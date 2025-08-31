@@ -54,7 +54,7 @@ NumPy is an open-source library that enables fast and efficient numerical comput
 
 1. [NumPy Documentation](https://numpy.org/about/): The official NumPy documentation. Use it whenever you want to know about any class, function, or method in NumPy.
     
-2. [Getting started with NumPy & NumPy Arrays](https://blog.adarshdubey.com/getting-started-with-numpy-arrays): It's a blog I wrote some time ago, and you might find this useful.
+2. [Getting started with NumPy & NumPy Arrays](https://adarshdubey.com/getting-started-with-numpy-arrays): It's a blog I wrote some time ago, and you might find this useful.
     
 
 In my honest opinion, you can just search for a NumPy tutorial on YouTube or the internet, which you can complete in a day. After that, try writing small scripts like **matrix multiplication using NumPy**.
