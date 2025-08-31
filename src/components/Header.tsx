@@ -1,7 +1,5 @@
 import { HEADER_LINKS } from "@/constants";
-import { ArrowUpRight } from "lucide-react";
-import Link from "next/link";
-import React from "react";
+import MinimalLink from "./ui/minimal-link";
 
 const Header = () => {
 	return (
@@ -9,16 +7,7 @@ const Header = () => {
 			<h1 className="text-3xl font-bold">Adarsh Dubey</h1>
 			<div className="mt-2 text-foreground/80 flex gap-x-4 md:gap-6 flex-wrap">
 				{HEADER_LINKS.map(link => (
-					<Link
-						key={link.label}
-						href={link.href}
-						target="_blank"
-						rel="noopener noreferrer"
-						className="flex gap-1 items-center hover:text-foreground/60 transition-colors hover:cursor-pointer"
-					>
-						<ArrowUpRight size={16} />
-						{link.label}
-					</Link>
+					<MinimalLink key={link.label} link={link} />
 				))}
 			</div>
 			<p className="mt-4 mb-5 md:mb-10 text-muted-foreground">
