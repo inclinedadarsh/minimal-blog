@@ -1,37 +1,14 @@
 import Experience from "@/components/Experience";
+import Header from "@/components/Header";
 import Projects from "@/components/Projects";
 import Subscribe from "@/components/Subscribe";
 import Technologies from "@/components/Technologies";
 import TopBlogs from "@/components/TopBlogs";
-import { HEADER_LINKS } from "@/constants";
-import { ArrowUpRight } from "lucide-react";
-import Link from "next/link";
 
 export default async function Home() {
 	return (
 		<main className="md:mt-5">
-			<h1 className="text-3xl font-bold">Adarsh Dubey</h1>
-			<div className="mt-2 text-foreground/80 flex gap-x-4 md:gap-6 flex-wrap">
-				{HEADER_LINKS.map(link => (
-					<Link
-						key={link.label}
-						href={link.href}
-						target="_blank"
-						rel="noopener noreferrer"
-						className="flex gap-1 items-center hover:text-foreground/60 transition-colors hover:cursor-pointer"
-					>
-						<ArrowUpRight size={16} />
-						{link.label}
-					</Link>
-				))}
-			</div>
-			<p className="mt-4 mb-5 md:mb-10 text-muted-foreground">
-				I'm a web developer and machine learning engineer who loves
-				building in public. Currently contributing to Google DeepMind
-				through GSoC '25, and lately, I've been tinkering with LLMs. I
-				speak at local tech meetups, write technical blogs, and when I'm
-				not lost in code, I'm probably enjoying misal pav.
-			</p>
+			<Header />
 			<Experience />
 			<Projects />
 			<TopBlogs />
