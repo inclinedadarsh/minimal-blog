@@ -1,3 +1,4 @@
+import type { TECHNOLOGIES } from "@/constants";
 import type { StaticImageData } from "next/image";
 
 export type ExperienceItemType = {
@@ -8,7 +9,9 @@ export type ExperienceItemType = {
 	compnayWebsite: string;
 };
 
-export type TechnologyItemType = {
+export type TechnologyType = {
 	name: string;
 	logo: StaticImageData;
 };
+
+export type TechnologyNameType = keyof typeof TECHNOLOGIES;
