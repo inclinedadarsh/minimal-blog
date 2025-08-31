@@ -24,12 +24,8 @@ const links: LinkType[] = [
 		href: "https://linkedin.com/in/dubeyadarsh/",
 	},
 	{
-		label: "newsletter",
-		href: "https://theneuron.substack.com/",
-	},
-	{
-		label: "youtube",
-		href: "https://www.youtube.com/@inclinedadarsh",
+		label: "cal.com",
+		href: "https://cal.com/adarshdubey",
 	},
 ];
 
@@ -52,7 +48,7 @@ export default async function Home() {
 				))}
 			</div>
 			<p className="mt-4 mb-5 md:mb-10 text-muted-foreground">
-				I'm a web developer and machine learning enthusiast who loves
+				I'm a web developer and machine learning engineer who loves
 				building in public. Currently contributing to Google DeepMind
 				through GSoC '25, and lately, I've been tinkering with LLMs. I
 				speak at local tech meetups, write technical blogs, and when I'm

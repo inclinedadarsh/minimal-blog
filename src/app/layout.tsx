@@ -20,10 +20,11 @@ const firaCode = Fira_Code({
 export const metadata: Metadata = {
 	metadataBase: new URL(process.env.SITE_URL || "http://localhost:3000"),
 	title: {
-		default: "Adarsh Dubey's Blog",
+		default: "Adarsh Dubey",
 		template: "%s | Adarsh Dubey",
 	},
-	description: "Adarsh Dubey's Blog",
+	description:
+		"Adarsh Dubey is a web developr and machine learning engineer.",
 };
 
 export default function RootLayout({
