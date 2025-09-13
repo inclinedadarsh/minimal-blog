@@ -33,7 +33,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
+		<html lang="en" suppressHydrationWarning>
 			<body
 				className={
 					"font-body antialiased max-w-2xl px-5 md:px-0 mx-auto"
