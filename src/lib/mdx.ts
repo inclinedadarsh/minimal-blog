@@ -1,3 +1,4 @@
+import GHLink from "@/components/ui/gh-link";
 import type { Element, Root } from "hast";
 import { compileMDX } from "next-mdx-remote/rsc";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
@@ -114,6 +115,9 @@ export async function compileMDXWithOptions(source: string) {
 					rehypeTableWrapper,
 				],
 			},
+		},
+		components: {
+			GHLink,
 		},
 	});
 }

@@ -47,6 +47,8 @@
 	--color-link: var(--link);
 	--color-link-hover: var(--link-hover);
 	--color-code: var(--code);
+	--color-gh-open: var(--gh-open);
+	--color-gh-closed: var(--gh-closed);
 }
 
 :root {
@@ -85,6 +87,8 @@
 	--link: oklch(0.5296 0.153 259.9);
 	--link-hover: oklch(0.4822 0.153 259.9);
 	--code: oklch(0.4217 0.1569 259.91);
+	--gh-open: oklch(0.5244 0.1401 148.04);
+	--gh-closed: oklch(0.5631 0.2069 294.97);
 }
 
 .dark {
@@ -122,6 +126,8 @@
 	--link: oklch(0.7905 0.16913358118545185 161.86135173033207);
 	--link-hover: oklch(0.7478 0.16913358118545185 161.86135173033207);
 	--code: oklch(0.8163 0.0896 243.62);
+	--gh-open: oklch(0.6951 0.1809 145.62);
+	--gh-closed: oklch(0.5843 0.2053 295.56);
 }
 
 @layer base {
@@ -172,7 +178,7 @@
 	}
 
 	/* Link styles */
-	.prose a:not(h1 a, h2 a, h3 a, h4 a, .tags a) {
+	.prose a:not(h1 a, h2 a, h3 a, h4 a, .tags a, .issue, .pr) {
 		@apply text-link no-underline hover:text-link-hover transition-colors break-words hover:bg-link/15;
 	}
 
