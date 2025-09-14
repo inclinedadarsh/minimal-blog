@@ -8,18 +8,32 @@ const GHLinkIcon = ({
 }: { type: "issue" | "pr"; status: "open" | "closed" }) => {
 	if (type === "issue") {
 		if (status === "open") {
-			return <CircleDot className="text-gh-open" size={18} />;
+			return (
+				<CircleDot className="text-gh-open min-w-[18px]" size={18} />
+			);
 			// biome-ignore lint/style/noUselessElse: <explanation>
 		} else {
-			return <CircleCheck className="text-gh-closed" size={18} />;
+			return (
+				<CircleCheck
+					className="text-gh-closed min-w-[18px]"
+					size={18}
+				/>
+			);
 		}
 		// biome-ignore lint/style/noUselessElse: <explanation>
 	} else {
 		if (status === "open") {
-			return <GitPullRequest className="text-gh-open" size={18} />;
+			return (
+				<GitPullRequest
+					className="text-gh-open min-w-[18px]"
+					size={18}
+				/>
+			);
 			// biome-ignore lint/style/noUselessElse: <explanation>
 		} else {
-			return <GitMerge className="text-gh-closed" size={18} />;
+			return (
+				<GitMerge className="text-gh-closed min-w-[18px]" size={18} />
+			);
 		}
 	}
 };
@@ -50,9 +64,11 @@ const GHLink = ({
 			)}
 		>
 			<GHLinkIcon type={type} status={status} />
-			<span className="">{title}</span>
-			<span className="text-muted-foreground text-sm">
-				#{issueNumber}
+			<span className="">
+				{title}{" "}
+				<span className="text-muted-foreground text-sm">
+					#{issueNumber}
+				</span>
 			</span>
 		</Link>
 	);
