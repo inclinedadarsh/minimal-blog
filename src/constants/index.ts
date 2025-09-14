@@ -138,6 +138,10 @@ export const NAV_LINKS: LinkType[] = [
 		href: "/",
 	},
 	{
+		label: "projects",
+		href: "/projects",
+	},
+	{
 		label: "blogs",
 		href: "/blog",
 	},
