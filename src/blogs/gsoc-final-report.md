@@ -17,7 +17,9 @@ My name is Adarsh Dubey, and I was a contributor this summer under the Google De
 
 This project was about building an end-to-end platform for fine-tuning Gemma models. It aims to lower the barrier of fine-tuning language models by providing a user-friendly interface, so that anyone can fine-tune a model without having to understand all the jargon related to it. The target audience is people who don't have enough technical knowledge to fine-tune language models but know enough to run Ollama locally. I worked on this project along with [Jet Chiang](https://github.com/supreme-gg-gg).
 
-![GitHub Screenshot](/images/gsoc-final-report/github-ss.png)
+Please checkout the demo video below, or on [youtube here](https://youtu.be/JGnzoLSZReI?si=2Mv_nnwPMpLnPBn6).
+
+<YouTubeEmbed embedLink="https://www.youtube.com/embed/JGnzoLSZReI?si=CnIYE3dd4hZl5A9c" />
 
 All the source code for the project is available at [github.com/gemma-facet](https://github.com/gemma-facet), and the documentation is available at [facetai.mintlify.app](https://facetai.mintlify.app/).
 
@@ -63,7 +65,7 @@ While Jet handled most of the cloud-related and operational tasks, I worked on s
 
 Setting up the documentation and API references was another significant part of my work, which included implementing comprehensive API documentation for all the services we developed.
 
-The remaining components were expertly handled by Jet, including the vision and augmentation features of the dataset preprocessing service, the training service (and its job implementation), the inference service, frontend components for his services, operations, and documentation. Jet's expertise really showed throughout the project. If you want to learn more about his contributions, you can check out [his blog](#).
+The remaining components were expertly handled by Jet, including the vision and augmentation features of the dataset preprocessing service, the training service (and its job implementation), the inference service, frontend components for his services, operations, and documentation. Jet's expertise really showed throughout the project. If you want to learn more about his contributions, you can check out [his blog](https://jetchiang.co/blogs/gsoc/).
 
 ### PRs and Issues
 
