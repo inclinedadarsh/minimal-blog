@@ -261,7 +261,7 @@
 
 	/* Image styles */
 	.prose img {
-		@apply my-8 rounded-lg border border-neutral-200 dark:border-neutral-800;
+		@apply rounded-lg border border-neutral-200 dark:border-neutral-800;
 	}
 
 	/* Horizontal rule styles */
