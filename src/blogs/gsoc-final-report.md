@@ -1,6 +1,6 @@
 ---
 title: "GSoC 2025 Project Report: Building Gemma Facet for Easy Model Fine-Tuning"
-datePublished: 2025-10-14
+datePublished: 2025-09-14
 seoTitle: "GSoC 2025 Project Report: Building Gemma Facet for Easy Model Fine-Tuning"
 seoDescription: "My GSoC 2025 report on building an end-to-end platform for fine-tuning Gemma models with dataset processing, training, and export services."
 tags: ['gsoc', 'project']
