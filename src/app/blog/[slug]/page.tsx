@@ -2,6 +2,7 @@ import Subscribe from "@/components/Subscribe";
 import { buttonVariants } from "@/components/ui/button";
 import { getAllBlogs, getBlogBySlug } from "@/lib/blogs";
 import { compileMDXWithOptions } from "@/lib/mdx";
+import { generateRSS } from "@/lib/rss";
 import { cn } from "@/lib/utils";
 import { ArrowUpRight } from "lucide-react";
 import type { Metadata } from "next";
@@ -9,6 +10,10 @@ import Link from "next/link";
 
 export async function generateStaticParams() {
 	const blogs = await getAllBlogs();
+
+	// Build the RSS feed
+	await generateRSS(blogs);
+
 	return blogs.map(blog => ({
 		slug: blog.slug,
 	}));
