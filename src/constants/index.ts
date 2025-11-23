@@ -117,18 +117,27 @@ export const HEADER_LINKS: LinkType[] = [
 	{
 		label: "twitter",
 		href: "https://x.com/inclinedadarsh",
+		openInNewTab: true,
 	},
 	{
 		label: "github",
 		href: "https://github.com/inclinedadarsh",
+		openInNewTab: true,
 	},
 	{
 		label: "linkedin",
 		href: "https://linkedin.com/in/dubeyadarsh/",
+		openInNewTab: true,
+	},
+	{
+		label: "peerlist",
+		href: "https://peerlist.io/inclinedadarsh",
+		openInNewTab: true,
 	},
 	{
 		label: "cal.com",
 		href: "https://cal.com/adarshdubey",
+		openInNewTab: true,
 	},
 ];
 
