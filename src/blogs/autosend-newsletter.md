@@ -8,7 +8,7 @@ tags: ['project', 'webdev', 'guide']
 
 Even after having a newsletter form right on this website, I never bothered actually sending emails through it, because of two major reasons:
 
-1. Sending emails to all subscribers automatically, without having to set it up manually. This includes the major part: being able to render the markdown text for the email.
+1. Sending emails to all subscribers automatically, without having to set it up manually. This means looping over all the subscribers and sending them emails one by one.
 
 2. Setting up unsubscription services. Even if I could set up a system to handle sending emails, setting up unsubscription links and all that is a really big task. If you've ever thought about scale, you'd understand how unmanageable it would get if I don't care about it enough while developing.
 
@@ -16,23 +16,23 @@ Because of these two reasons, I never used those emails I collected to send news
 
 ![Autosend Homepage](/images/autosend-newsletter/autosend-homepage.png)
 
-However, I recently came across [AutoSend](https://autosend.com/), which solves all these problems in a way that allows me to not just bother with these, but also leave this all directly to AutoSend. To play around with it, I built a newsletter app that has a form to collect emails, admin panels to send newsletters to all those collected emails, and also publishes them right on the website. At the end, we'll also use AutoSend's dashboard to see the deliverability of our emails. There are a few more features from AutoSend that we'll be using, which I'll cover later in the blog. The goal was to not just create a *toy* version—it was to create something that I could use in real life.
+However, I recently came across [AutoSend](https://autosend.com/), which solves all these problems in a way that allows me to not just bother with these, but also leave this all directly to AutoSend. To play around with it, I built a newsletter app that has a form to collect emails, admin panels to send newsletters to all those collected emails, and also publishes them right on the website. After sending emails, we can also use AutoSend's dashboard to see the deliverability of our emails. There are a few more features from AutoSend that we'll be using, which I'll cover later in the blog. The goal was to not just create a *toy* version, it was to create something that I could use in real life.
 
 This blog is going to be about that application. Think of it as a guide to creating a newsletter app using Next.js and AutoSend, where I don't just provide you with code snippets (I'll be doing that as well though), but also share some of my architectural design decisions. Here's a sneak peek of how it's going to look:
 
 ![Newsletter App Screenshot](/images/autosend-newsletter/newsletter-homepage.png)
 
-The entire source code is available at [github.com/inclinedadarsh/autosend-newsletter](https://github.com/inclinedadarsh/autosend-newsletter). Do check it out, and feel free to raise PRs to improve it! If you want to check the website yourself, the newsletter app is live at [https://autosend-newsletter.vercel.app](https://autosend-newsletter.vercel.app).
+The entire source code is available at [github.com/inclinedadarsh/autosend-newsletter](https://github.com/inclinedadarsh/autosend-newsletter). Do check it out, and feel free to raise PRs to improve it! If you want to check the application yourself, it's live at [https://autosend-newsletter.vercel.app](https://autosend-newsletter.vercel.app).
 
 ## Getting started with AutoSend
 
 Getting started with AutoSend was pretty easy. All I had to do was create an account, choose a pricing plan, and create an API key. I chose the most basic plan from AutoSend because I wanted it to be cheap. Even after choosing the most basic plan, I was able to build everything that I was aiming for.
 
-One of the features I used from AutoSend was sending bulk emails. The [`POST /mails/bulk`](https://docs.autosend.com/api-reference/mails/bulk) API lets you send an email to 100 recipients per request. Another feature I used was the unsubscription part. Wherever in the email you use `<a href="{{unsubscribe}}">Unsubscribe</a>`, AutoSend automatically creates a unique unsubscribe link for all the recipients in that email. Just by using `href="{{unsubscribe}}"` in the anchor tag, you have access to the unsubscribe feature. Just one line of code, that's all it took. The way unsubscriptions work in AutoSend is that whenever a person unsubscribes from an email, that person's email is stored in AutoSend, and if you try sending that email another mail under the same mail group, AutoSend itself doesn't send the email to that person.
+One of the features I used from AutoSend was sending bulk emails. The [`POST /mails/bulk`](https://docs.autosend.com/api-reference/mails/bulk) API lets you send an email to 100 recipients per request. Another feature I used was the unsubscription part. Wherever in the email you use `<a href="{{unsubscribe}}">Unsubscribe</a>`, AutoSend automatically creates a unique unsubscribe link for all the recipients in that email. Just by using `href="{{unsubscribe}}"` in the anchor tag, you have access to the unsubscribe feature. All it took was one line of code. The way unsubscriptions work in AutoSend is that whenever a person unsubscribes from an email, that person's email is stored in AutoSend, and if you try sending that email another mail under the same mail group, AutoSend itself doesn't send the email to that person.
 
 Another very cool feature I used is known as [email templates](https://docs.autosend.com/transactional-emails/email-templates). It allows me to change the emails that are sent to users, without even opening my IDE. Other than that, we can have dynamic variables inside the emails we're sending.
 
-To get started, sign up for AutoSend and create an API key, which you'll need for this application.
+To get started, [sign up for AutoSend](https://autosend.com/signup) and create an API key, which you'll need for this application.
 
 ## Project Scope
 
@@ -82,7 +82,7 @@ As mentioned in the start, we'll be having an email verification when a person t
 
 ### Sending emails
 
-[AutoSend Docs](https://docs.autosend.com/) mention all the endpoints and payloads clearly. To use these in my application, I decided to create functions wrapping around these endpoints for my use case, and then use those in the API routes. Honestly speaking, I didn't even create these functions myself—I just had to tell Claude to do this. The docs are so clear that Claude did it in one prompt. It created three functions in total: `sendVerificationEmail`, `sendWelcomeEmail`, and `sendNewsletterBulk`.
+[AutoSend Docs](https://docs.autosend.com/) mention all the endpoints and payloads clearly. To use these in my application, I decided to create functions wrapping around these endpoints for my use case, and then use those in the API routes. Honestly speaking, I didn't even create these functions myself, I just had to tell Claude to do this. The docs are so clear that Claude did it in one prompt. It created three functions in total: `sendVerificationEmail`, `sendWelcomeEmail`, and `sendNewsletterBulk`.
 
 For verification and welcome emails, I used AutoSend's **email templates**. It allows me to keep the template design in the AutoSend dashboard, so I can edit it anytime without having to worry about coming back to the codebase and redeploying the website.
 
@@ -317,7 +317,7 @@ These are some features that I believe will make this app 10x better. If you hav
 
 ## Conclusion
 
-I had a lot of fun building with AutoSend. This blog only touched the surface of what AutoSend can do—there are marketing campaigns, webhooks, and what not, so definitely check that out.
+I had a lot of fun building with AutoSend. This blog only touched the surface of what AutoSend can do, there are marketing campaigns, webhooks, and what not, so definitely check that out.
 
 If you liked the newsletter application, please leave a star on the [repository](https://github.com/inclinedadarsh/autosend-newsletter). I hope you learned something from the blog. You can connect with me on [Peerlist](https://peerlist.io/inclinedadarsh) or [X (Twitter)](https://x.com/inclinedadarsh).
 
