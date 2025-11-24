@@ -64,8 +64,10 @@ export default async function Image({
 					lineHeight: "140%",
 				}}
 			>
-				{blog.title[0].toUpperCase()}
-				{blog.title.slice(1).toLowerCase()}
+				{blog.ogTitle
+					? blog.ogTitle
+					: blog.title[0].toUpperCase() +
+						blog.title.slice(1).toLowerCase()}
 			</h1>
 			<div
 				style={{

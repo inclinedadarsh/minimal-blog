@@ -2,6 +2,7 @@
 title: "Building a Newsletter App with Next.js and AutoSend"
 datePublished: 2025-11-23
 seoTitle: "Building a Newsletter App with Next.js and AutoSend"
+ogTitle: "Building a Newsletter App with Next.js and AutoSend"
 seoDescription: "I built a complete newsletter application using Next.js and AutoSend, handling email deliverability, unsubscriptions, and bulk sending. Here's how I did it and what I learned along the way."
 tags: ['project', 'webdev', 'guide']
 ---

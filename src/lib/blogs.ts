@@ -65,6 +65,7 @@ export async function getBlogBySlug(slug: string) {
 		seoDescription: data.seoDescription,
 		tags: data.tags || [],
 		notebookLM: data.notebookLM || "",
+		ogTitle: data.ogTitle,
 	};
 }
 
