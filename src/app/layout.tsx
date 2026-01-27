@@ -1,6 +1,6 @@
 import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
-import { Fira_Code, Inter } from "next/font/google";
+import { Geist_Mono, Inter, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
@@ -10,11 +10,21 @@ import { Toaster } from "@/components/ui/sonner";
 const inter = Inter({
 	variable: "--font-inter",
 	subsets: ["latin"],
+	axes: ["opsz"],
+	display: "swap",
 });
 
-const firaCode = Fira_Code({
-	variable: "--font-fira-code",
+const sourceSerif4 = Source_Serif_4({
+	variable: "--font-source-serif-4",
 	subsets: ["latin"],
+	axes: ["opsz"],
+	display: "swap",
+});
+
+const geistMono = Geist_Mono({
+	variable: "--font-geist-mono",
+	subsets: ["latin"],
+	display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -36,7 +46,7 @@ export default function RootLayout({
 		<html lang="en" suppressHydrationWarning>
 			<body
 				className={
-					"font-body antialiased max-w-2xl px-5 md:px-0 mx-auto"
+					"font-sans antialiased max-w-2xl px-5 md:px-0 mx-auto"
 				}
 			>
 				<ThemeProvider
