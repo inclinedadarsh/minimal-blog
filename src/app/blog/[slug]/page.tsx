@@ -1,4 +1,3 @@
-import Subscribe from "@/components/Subscribe";
 import { buttonVariants } from "@/components/ui/button";
 import { getAllBlogs, getBlogBySlug } from "@/lib/blogs";
 import { compileMDXWithOptions } from "@/lib/mdx";
@@ -93,7 +92,6 @@ export default async function BlogPage({
 				<div className="mt-6">{content}</div>
 				<hr className="my-6 border-neutral-200 dark:border-neutral-800" />
 			</article>
-			<Subscribe slug={slug} page="Blog" />
 		</div>
 	);
 }
