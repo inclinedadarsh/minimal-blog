@@ -1,11 +1,11 @@
+import { ArrowUpRight } from "lucide-react";
+import type { Metadata } from "next";
+import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { getAllBlogs, getBlogBySlug } from "@/lib/blogs";
 import { compileMDXWithOptions } from "@/lib/mdx";
 import { generateRSS } from "@/lib/rss";
 import { cn } from "@/lib/utils";
-import { ArrowUpRight } from "lucide-react";
-import type { Metadata } from "next";
-import Link from "next/link";
 
 export async function generateStaticParams() {
 	const blogs = await getAllBlogs();
@@ -47,7 +47,7 @@ export default async function BlogPage({
 				<h1 className="text-3xl font-bold">{blog.title}</h1>
 				<time
 					dateTime={blog.datePublished}
-					className="text-neutral-600 dark:text-neutral-400 mt-3 block"
+					className="text-muted-foreground font-mono uppercase tracking-wider font-medium mt-3 block text-sm"
 				>
 					{new Date(blog.datePublished).toLocaleDateString("en-US", {
 						year: "numeric",
@@ -56,7 +56,7 @@ export default async function BlogPage({
 					})}
 				</time>
 				{blog.tags.length > 0 && (
-					<div className="flex gap-2 mt-3 tags">
+					<div className="flex gap-2 mt-4 tags">
 						{blog.tags.map((tag: string) => (
 							<Link
 								key={tag}

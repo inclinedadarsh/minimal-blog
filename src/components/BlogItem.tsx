@@ -1,29 +1,29 @@
-import type { BlogMetadata } from "@/lib/blogs";
 import Link from "next/link";
-import React from "react";
+import type { BlogMetadata } from "@/lib/blogs";
 
 const BlogItem = ({ blog }: { blog: BlogMetadata }) => {
+	const d = new Date(blog.datePublished);
+
+	const formatted = `${String(d.getDate()).padStart(2, "0")} ${d.toLocaleString(
+		"en-US",
+		{ month: "short" },
+	)}, ${String(d.getFullYear()).slice(-2)}`;
+
 	return (
 		<Link
 			key={blog.slug}
-			className="flex flex-col space-y-1 mb-4 hover:text-foreground/70 transition-colors"
+			className="flex items-baseline gap-4 mb-4 group hover:text-foreground/70 transition-colors"
 			href={`/blog/${blog.slug}`}
 		>
-			<div className="w-full hover:text-foreground/70 transition-colors flex flex-col md:flex-row gap-0 md:gap-2">
-				<time
-					dateTime={blog.datePublished}
-					className="text-muted-foreground min-w-[120px]"
-				>
-					{new Date(blog.datePublished).toLocaleDateString("en-US", {
-						year: "numeric",
-						month: "short",
-						day: "numeric",
-					})}
-				</time>
-				<h3 className="text-foreground hover:text-foreground/70 transition-colors font-medium">
-					{blog.title}
-				</h3>
-			</div>
+			<time
+				dateTime={blog.datePublished}
+				className="text-muted-foreground font-mono uppercase tracking-wider font-medium text-sm min-w-fit relative -top-px"
+			>
+				{formatted}
+			</time>
+			<h3 className="text-foreground group-hover:text-foreground/70 transition-colors font-medium text-pretty">
+				{blog.title}
+			</h3>
 		</Link>
 	);
 };
