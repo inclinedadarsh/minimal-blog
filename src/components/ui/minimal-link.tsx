@@ -1,6 +1,6 @@
-import type { LinkType } from "@/types";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import type { LinkType } from "@/types";
 
 const MinimalLink = ({ link }: { link: LinkType }) => {
 	return (

@@ -7,21 +7,21 @@ import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 
-const inter = Inter({
+const _inter = Inter({
 	variable: "--font-inter",
 	subsets: ["latin"],
 	axes: ["opsz"],
 	display: "swap",
 });
 
-const sourceSerif4 = Source_Serif_4({
+const _sourceSerif4 = Source_Serif_4({
 	variable: "--font-source-serif-4",
 	subsets: ["latin"],
 	axes: ["opsz"],
 	display: "swap",
 });
 
-const geistMono = Geist_Mono({
+const _geistMono = Geist_Mono({
 	variable: "--font-geist-mono",
 	subsets: ["latin"],
 	display: "swap",
@@ -61,7 +61,7 @@ export default function RootLayout({
 					<Toaster richColors />
 				</ThemeProvider>
 			</body>
-			{/* biome-ignore lint/style/noNonNullAssertion: <explanation> */}
+			{/* biome-ignore lint/style/noNonNullAssertion: from nextjs docs */}
 			<GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />
 		</html>
 	);

@@ -1,7 +1,8 @@
+/** biome-ignore-all lint/performance/noImgElement: it's for the opengraph image */
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
-import { getAllBlogs, getBlogBySlug } from "@/lib/blogs";
 import { ImageResponse } from "next/og";
+import { getAllBlogs, getBlogBySlug } from "@/lib/blogs";
 
 export async function generateStaticParams() {
 	const blogs = await getAllBlogs();
@@ -33,7 +34,9 @@ async function loadGoogleFont() {
 
 export default async function Image({
 	params,
-}: { params: Promise<{ slug: string }> }) {
+}: {
+	params: Promise<{ slug: string }>;
+}) {
 	const { slug } = await params;
 	const blog = await getBlogBySlug(slug);
 

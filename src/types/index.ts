@@ -1,5 +1,5 @@
-import type { TECHNOLOGIES } from "@/constants";
 import type { StaticImageData } from "next/image";
+import type { TECHNOLOGIES } from "@/constants";
 
 export type ExperienceItemType = {
 	companyName: string;

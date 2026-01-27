@@ -1,6 +1,6 @@
+import Image from "next/image";
 import { TECHNOLOGIES } from "@/constants";
 import type { TechnologyNameType } from "@/types";
-import Image from "next/image";
 
 const Technology = ({ name }: { name: TechnologyNameType }) => {
 	const item = TECHNOLOGIES[name];

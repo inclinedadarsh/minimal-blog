@@ -1,10 +1,10 @@
 "use client";
 
-import { NAV_LINKS } from "@/constants";
-import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import { NAV_LINKS } from "@/constants";
+import { cn } from "@/lib/utils";
 import { ThemeToggle } from "./ThemeToggle";
 
 const Navbar = () => {

@@ -1,41 +1,30 @@
-import { cn } from "@/lib/utils";
 import { CircleCheck, CircleDot, GitMerge, GitPullRequest } from "lucide-react";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 const GHLinkIcon = ({
 	type,
 	status,
-}: { type: "issue" | "pr"; status: "open" | "closed" }) => {
+}: {
+	type: "issue" | "pr";
+	status: "open" | "closed";
+}) => {
 	if (type === "issue") {
 		if (status === "open") {
 			return (
 				<CircleDot className="text-gh-open min-w-[18px]" size={18} />
 			);
-			// biome-ignore lint/style/noUselessElse: <explanation>
-		} else {
-			return (
-				<CircleCheck
-					className="text-gh-closed min-w-[18px]"
-					size={18}
-				/>
-			);
 		}
-		// biome-ignore lint/style/noUselessElse: <explanation>
-	} else {
-		if (status === "open") {
-			return (
-				<GitPullRequest
-					className="text-gh-open min-w-[18px]"
-					size={18}
-				/>
-			);
-			// biome-ignore lint/style/noUselessElse: <explanation>
-		} else {
-			return (
-				<GitMerge className="text-gh-closed min-w-[18px]" size={18} />
-			);
-		}
+		return (
+			<CircleCheck className="text-gh-closed min-w-[18px]" size={18} />
+		);
 	}
+	if (status === "open") {
+		return (
+			<GitPullRequest className="text-gh-open min-w-[18px]" size={18} />
+		);
+	}
+	return <GitMerge className="text-gh-closed min-w-[18px]" size={18} />;
 };
 
 const GHLink = ({
