@@ -4,8 +4,15 @@ import MinimalLink from "./ui/minimal-link";
 const Header = () => {
 	return (
 		<div>
-			<h1 className="text-3xl font-bold">Adarsh Dubey</h1>
-			<div className="mt-2 text-foreground/80 flex gap-x-4 md:gap-6 flex-wrap">
+			<div className="flex gap-3 items-end">
+				<h1 className="text-3xl md:text-[40px] font-semibold font-serif">
+					Adarsh Dubey
+				</h1>
+				<span className="hidden sm:block text-muted-foreground font-mono uppercase tracking-wider font-medium text-sm">
+					{"{"}Full Stack AI Engineer{"}"}
+				</span>
+			</div>
+			<div className="mt-6 text-foreground/80 flex gap-x-4 md:gap-6 flex-wrap">
 				{HEADER_LINKS.map(link => (
 					<MinimalLink key={link.label} link={link} />
 				))}

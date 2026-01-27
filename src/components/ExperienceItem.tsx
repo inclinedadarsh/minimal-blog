@@ -1,6 +1,6 @@
-import type { ExperienceItemType } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
+import type { ExperienceItemType } from "@/types";
 
 const ExperienceItem = ({
 	companyName,
@@ -14,7 +14,7 @@ const ExperienceItem = ({
 			href={compnayWebsite}
 			target="_blank"
 			rel="noopener noreferrer"
-			className="flex max-[500px]:flex-col flex-row justify-between max-[500px]:items-start items-center gap-4 py-4 rounded-md group"
+			className="flex max-[500px]:flex-col flex-row justify-between max-[500px]:items-start items-center gap-2 md:gap-4 py-4 rounded-md group"
 		>
 			<div className="flex items-center gap-4">
 				<Image
@@ -29,7 +29,7 @@ const ExperienceItem = ({
 					</p>
 				</div>
 			</div>
-			<p className="text-sm md:text-base text-muted-foreground max-[500px]:self-end">
+			<p className="text-sm text-muted-foreground max-[500px]:self-end font-mono uppercase tracking-wider font-medium">
 				{workDuration}
 			</p>
 		</Link>

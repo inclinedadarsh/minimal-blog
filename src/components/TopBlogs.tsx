@@ -12,7 +12,7 @@ export default async function TopBlogs() {
 				<h2 className="text-2xl font-bold">Recent blogs</h2>
 				<MinimalLink link={{ label: "all blogs", href: "/blog" }} />
 			</div>
-			<div className="space-y-4">
+			<div className="space-y-6 md:space-y-4">
 				{blogs.map(blog => (
 					<BlogItem key={blog.slug} blog={blog} />
 				))}

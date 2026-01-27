@@ -4,15 +4,14 @@ import type { BlogMetadata } from "@/lib/blogs";
 const BlogItem = ({ blog }: { blog: BlogMetadata }) => {
 	const d = new Date(blog.datePublished);
 
-	const formatted = `${String(d.getDate()).padStart(2, "0")} ${d.toLocaleString(
-		"en-US",
-		{ month: "short" },
-	)}, ${String(d.getFullYear()).slice(-2)}`;
+	const formatted = `${d.toLocaleString("en-US", {
+		month: "short",
+	})} ${String(d.getDate()).padStart(2, "0")}`;
 
 	return (
 		<Link
 			key={blog.slug}
-			className="flex items-baseline gap-4 mb-4 group hover:text-foreground/70 transition-colors"
+			className="flex flex-col md:flex-row items-baseline gap-1 md:gap-4 group hover:text-foreground/70 transition-colors"
 			href={`/blog/${blog.slug}`}
 		>
 			<time

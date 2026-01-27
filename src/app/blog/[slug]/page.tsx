@@ -44,7 +44,9 @@ export default async function BlogPage({
 	return (
 		<div className="">
 			<article className="prose prose-neutral dark:prose-invert max-w-none mt-5">
-				<h1 className="text-3xl font-bold">{blog.title}</h1>
+				<h1 className="text-3xl md:text-[40px] font-semibold font-serif">
+					{blog.title}
+				</h1>
 				<time
 					dateTime={blog.datePublished}
 					className="text-muted-foreground font-mono uppercase tracking-wider font-medium mt-3 block text-sm"
