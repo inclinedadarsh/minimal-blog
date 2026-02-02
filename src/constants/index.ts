@@ -159,6 +159,11 @@ export const NAV_LINKS: LinkType[] = [
 		href: "https://readinglist.adarshdubey.com",
 		openInNewTab: true,
 	},
+	{
+		label: "echo",
+		href: "https://echo.adarshdubey.com",
+		openInNewTab: true,
+	},
 ];
 
 export const PROJECTS: ProjectItemType[] = [
