@@ -1,0 +1,74 @@
+# llms.txt for https://adarshdubey.com
+# Generated: 2025-02-22
+# See https://llmstxt.org/ for specification
+
+## SITE
+Name: Adarsh Dubey
+Description: Personal portfolio blog of a Full Stack AI Engineer
+Author: Adarsh Dubey
+URL: https://adarshdubey.com
+
+## CONTENT
+Type: Technical blog posts, project documentation, tutorials, and research notes
+Topics: Machine learning, deep learning, NLP/LLMs (BPE tokenization, fine-tuning, SLMs),
+        web development (Next.js, React, TypeScript, Tailwind CSS), system design,
+        tooling and infrastructure, developer productivity, open source contributions
+Content style: Practical, hands-on tutorials with code examples; deep dives into ML concepts;
+               project post-mortems and build logs; opinion pieces on industry trends
+Blog posts: 20+ published articles covering:
+    - BPE tokenizer implementations and theory
+    - Gemma model fine-tuning and optimization
+    - Small language model research
+    - Next.js and React best practices
+    - NumPy and autograd systems
+    - Terminal workflow and developer tools
+Projects documented:
+    - Facet: Gemma finetuner with efficiency focus
+    - Incligrad: Custom autograd engine
+    - Inclinet: Scratch-built neural network library
+    - Anon: Privacy-first anonymous forum
+License: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 (CC BY-NC-SA 4.0)
+RSS Feed: https://adarshdubey.com/rss.xml
+Sitemap: https://adarshdubey.com/sitemap.xml
+
+## OWNER
+Name: Adarsh Dubey
+Bio: Full Stack AI Engineer and Machine Learning Engineer with a passion for building
+     in public and exploring the frontiers of LLMs. Currently contributing to Google DeepMind
+     as a GSoC '25 contributor and serving as a core team member at WeMakeDevs community.
+
+     Expertise spans machine learning, natural language processing, and modern web development.
+     Actively researching and experimenting with small language models, fine-tuning techniques,
+     and efficient inference methods. In web development, specializes in Next.js, React, TypeScript,
+     and building performant, accessible user interfaces.
+
+     Notable open source projects:
+     - Facet: A Gemma finetuning tool for efficient model adaptation
+     - Anon: An anonymous discussion platform built for privacy-focused communities
+     - Inclinet: A custom neural network library from scratch
+     - Incligrad: An automatic differentiation engine for gradient computation
+
+     Philosophy: Strong advocate for open source, developer education, and sharing knowledge
+     through technical blog posts and community contributions. Believes in the power of
+     transparent, reproducible research and development.
+
+Contact:
+  - GitHub: https://github.com/inclinedadarsh
+  - LinkedIn: https://linkedin.com/in/dubeyadarsh/
+  - Twitter: https://x.com/inclinedadarsh
+  - Website: https://adarshdubey.com
+  - Cal.com: https://cal.com/adarshdubey
+
+## AI USAGE POLICY
+Allowed: Yes, with attribution
+Conditions:
+  - Attribution to Adarsh Dubey and https://adarshdubey.com
+  - Non-commercial use only
+  - Share-alike for derivative works
+Not Allowed: Commercial use without explicit permission
+Contact for permissions: DM on Twitter/X (@inclinedadarsh) or GitHub
+
+## TECHNICAL
+Stack: Next.js 16, React 19, TypeScript, Tailwind CSS v4
+CMS: Markdown files (MDX) stored in repository
+Update frequency: Regular (blog posts ~monthly, commits frequent)
