@@ -35,8 +35,14 @@ export async function generateMetadata({
 	}
 
 	return {
+		metadataBase: new URL(process.env.SITE_URL || "http://localhost:3000"),
 		title: blog.seoTitle || blog.title,
 		description: blog.seoDescription || "",
+		alternates: {
+			types: {
+				"text/markdown": `/blog/${slug}/llms.txt`,
+			},
+		},
 	};
 }
 

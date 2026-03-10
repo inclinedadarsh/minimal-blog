@@ -5,4 +5,5 @@ module.exports = {
 	generateRobotsTxt: true,
 	generateIndexSitemap: false,
 	sitemapSize: 1000,
+	exclude: ["/blog/*/llms.txt", "/blog/*/opengraph-image"],
 };
