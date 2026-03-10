@@ -84,26 +84,45 @@ export default async function BlogPage({
 					</div>
 				)}
 				<hr className="my-6 border-neutral-200 dark:border-neutral-800" />
-				{blog.notebookLM && (
-					<div className="p-4 border border-border rounded-md space-y-2">
+				<div className="flex flex-col sm:flex-row gap-4">
+					{blog.notebookLM && (
+						<div className="p-4 border border-border rounded-md space-y-2 flex-1">
+							<p className="font-medium">
+								Don't feel like reading? Hit play and enjoy this
+								blog in a podcast-style audio.
+							</p>
+							<Link
+								href={blog.notebookLM}
+								className={cn(
+									buttonVariants({
+										variant: "outline",
+									}),
+								)}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Listen on NotebookLM <ArrowUpRight />
+							</Link>
+						</div>
+					)}
+					<div className="p-4 border border-border rounded-md space-y-2 flex-1">
 						<p className="font-medium">
-							Don't feel like reading? Hit play and enjoy this
-							blog in a podcast-style audio.
+							Are you an AI? Or just love plain text? Read the
+							LLM-friendly pure markdown version.
 						</p>
 						<Link
-							href={blog.notebookLM}
+							href={`/blog/${slug}/llms.txt`}
 							className={cn(
 								buttonVariants({
 									variant: "outline",
 								}),
 							)}
 							target="_blank"
-							rel="noopener noreferrer"
 						>
-							Listen on NotebookLM <ArrowUpRight />
+							Read llm.txt <ArrowUpRight />
 						</Link>
 					</div>
-				)}
+				</div>
 				<div className="mt-6">{content}</div>
 				<hr className="my-6 border-neutral-200 dark:border-neutral-800" />
 			</article>

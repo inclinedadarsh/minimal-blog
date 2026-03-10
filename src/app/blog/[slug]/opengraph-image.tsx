@@ -40,6 +40,10 @@ export default async function Image({
 	const { slug } = await params;
 	const blog = await getBlogBySlug(slug);
 
+	if (!blog) {
+		return new Response("Not Found", { status: 404 });
+	}
+
 	const fontData = await loadGoogleFont();
 
 	const profileImageData = await readFile(
