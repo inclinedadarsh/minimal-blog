@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { buttonVariants } from "@/components/ui/button";
 import { getAllBlogs, getBlogBySlug } from "@/lib/blogs";
 import { compileMDXWithOptions } from "@/lib/mdx";
@@ -26,6 +27,13 @@ export async function generateMetadata({
 	const { slug } = await params;
 	const blog = await getBlogBySlug(slug);
 
+	if (!blog) {
+		return {
+			title: "Not Found",
+			description: "The page you are looking for does not exist.",
+		};
+	}
+
 	return {
 		title: blog.seoTitle || blog.title,
 		description: blog.seoDescription || "",
@@ -39,6 +47,11 @@ export default async function BlogPage({
 }) {
 	const { slug } = await params;
 	const blog = await getBlogBySlug(slug);
+
+	if (!blog) {
+		notFound();
+	}
+
 	const { content } = await compileMDXWithOptions(blog.content);
 
 	return (

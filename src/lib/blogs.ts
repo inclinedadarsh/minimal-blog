@@ -51,22 +51,35 @@ export async function getAllBlogs(): Promise<BlogMetadata[]> {
 
 export async function getBlogBySlug(slug: string) {
 	const fullPath = path.join(blogsDirectory, `${slug}.md`);
-	const fileContents = await fs.readFile(fullPath, "utf8");
 
-	// Use gray-matter to parse the post metadata section
-	const { data, content } = matter(fileContents);
+	try {
+		const fileContents = await fs.readFile(fullPath, "utf8");
 
-	return {
-		slug,
-		content,
-		title: data.title,
-		datePublished: data.datePublished,
-		seoTitle: data.seoTitle,
-		seoDescription: data.seoDescription,
-		tags: data.tags || [],
-		notebookLM: data.notebookLM || "",
-		ogTitle: data.ogTitle,
-	};
+		// Use gray-matter to parse the post metadata section
+		const { data, content } = matter(fileContents);
+
+		return {
+			slug,
+			content,
+			title: data.title,
+			datePublished: data.datePublished,
+			seoTitle: data.seoTitle,
+			seoDescription: data.seoDescription,
+			tags: data.tags || [],
+			notebookLM: data.notebookLM || "",
+			ogTitle: data.ogTitle,
+		};
+	} catch (error: unknown) {
+		if (
+			error &&
+			typeof error === "object" &&
+			"code" in error &&
+			error.code === "ENOENT"
+		) {
+			return null;
+		}
+		throw error;
+	}
 }
 
 // New function to get all unique tags
