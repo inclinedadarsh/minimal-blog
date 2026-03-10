@@ -6,7 +6,9 @@ import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
 import GHLink from "@/components/ui/gh-link";
+import { MarkdownTooltip } from "@/components/ui/markdown-tooltip";
 import YouTubeEmbed from "@/components/ui/youtube-embed";
+import { remarkTooltip } from "@/lib/remark-tooltip";
 
 const prettyCodeOptions: PrettyCodeOptions = {
 	theme: "github-dark",
@@ -107,7 +109,7 @@ export async function compileMDXWithOptions(source: string) {
 		options: {
 			parseFrontmatter: true,
 			mdxOptions: {
-				remarkPlugins: [remarkGfm],
+				remarkPlugins: [remarkGfm, remarkTooltip],
 				rehypePlugins: [
 					rehypeSlug,
 					[rehypeAutolinkHeadings, { behavior: "wrap" }],
@@ -120,6 +122,7 @@ export async function compileMDXWithOptions(source: string) {
 		components: {
 			GHLink,
 			YouTubeEmbed,
+			MarkdownTooltip,
 		},
 	});
 }
