@@ -101,14 +101,14 @@ export const EXPERIENCE_ITEMS: ExperienceItemType[] = [
 		companyName: "Google DeepMind",
 		companyLogo: deepmindLogo,
 		workTitle: "GSoC '25 contributor",
-		workDuration: "May 2025 — Aug 2025",
+		workDuration: "May 2025 — Sept 2025",
 		compnayWebsite: "https://deepmind.google",
 	},
 	{
 		companyName: "WeMakeDevs",
 		companyLogo: wemakedevsLogo,
 		workTitle: "Web developer & core team member",
-		workDuration: "2023 — Present",
+		workDuration: "2023 — 2025",
 		compnayWebsite: "https://wemakedevs.org",
 	},
 ];
