@@ -155,6 +155,11 @@ export const NAV_LINKS: LinkType[] = [
 		href: "/blog",
 	},
 	{
+		label: "tangent",
+		href: "https://tangentlab.xyz",
+		openInNewTab: true,
+	},
+	{
 		label: "reading list",
 		href: "https://readinglist.adarshdubey.com",
 		openInNewTab: true,
