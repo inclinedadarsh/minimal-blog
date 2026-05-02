@@ -12,7 +12,7 @@ const BlogItem = ({ blog }: { blog: BlogMetadata }) => {
 		<Link
 			key={blog.slug}
 			className="flex flex-col md:flex-row items-baseline gap-1 md:gap-4 group hover:text-foreground/70 transition-colors"
-			href={`/blog/${blog.slug}`}
+			href={`/blogs/${blog.slug}`}
 		>
 			<time
 				dateTime={blog.datePublished}

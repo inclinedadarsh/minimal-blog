@@ -152,7 +152,7 @@ export const NAV_LINKS: LinkType[] = [
 	// },
 	{
 		label: "blogs",
-		href: "/blog",
+		href: "/blogs",
 	},
 	{
 		label: "tangent",

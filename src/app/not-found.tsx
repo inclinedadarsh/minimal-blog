@@ -34,7 +34,7 @@ export default function NotFound() {
 					Return Home
 				</Link>
 				<Link
-					href="/blog"
+					href="/blogs"
 					className={cn(buttonVariants({ variant: "outline" }))}
 				>
 					Read the Blog

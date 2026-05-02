@@ -16,7 +16,7 @@ export async function generateRSS(posts: BlogMetadata[]) {
 		feed.item({
 			title: post.title,
 			description: post.seoDescription || "",
-			url: `${process.env.SITE_URL || "https://adarshdubey.com"}/blog/${post.slug}`,
+			url: `${process.env.SITE_URL || "https://adarshdubey.com"}/blogs/${post.slug}`,
 			date: new Date(post.datePublished),
 		});
 	}

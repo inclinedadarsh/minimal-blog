@@ -40,7 +40,7 @@ export async function generateMetadata({
 		description: blog.seoDescription || "",
 		alternates: {
 			types: {
-				"text/markdown": `/blog/${slug}/llms.txt`,
+				"text/markdown": `/blogs/${slug}/llms.txt`,
 			},
 		},
 	};
@@ -81,7 +81,7 @@ export default async function BlogPage({
 						{blog.tags.map((tag: string) => (
 							<Link
 								key={tag}
-								href={`/blog?tag=${tag}`}
+								href={`/blogs?tag=${tag}`}
 								className="text-sm px-2 py-1 bg-muted/0 outline-2 outline-muted dark:bg-neutral-800 dark:outline-neutral-800 rounded-md hover:bg-muted dark:hover:bg-neutral-700 transition-colors"
 							>
 								{tag}
@@ -117,7 +117,7 @@ export default async function BlogPage({
 							LLM-friendly pure markdown version.
 						</p>
 						<Link
-							href={`/blog/${slug}/llms.txt`}
+							href={`/blogs/${slug}/llms.txt`}
 							className={cn(
 								buttonVariants({
 									variant: "outline",
