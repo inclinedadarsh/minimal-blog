@@ -9,16 +9,18 @@ const ProjectItem = ({
 	technologies,
 }: ProjectItemType) => {
 	return (
-		<div>
-			<div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-1 md:gap-2">
-				<h3 className="text-lg font-bold">{name}</h3>
-				<div className="flex gap-4">
+		<div className="border border-border rounded-xl p-5 hover:border-muted-foreground/30 transition-colors">
+			<div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-2 mb-2">
+				<h3 className="text-xl font-semibold font-serif">{name}</h3>
+				<div className="flex gap-4 shrink-0">
 					{links.map(link => (
 						<MinimalLink key={link.label} link={link} />
 					))}
 				</div>
 			</div>
-			<p className="mb-2 mt-2 text-muted-foreground">{description}</p>
+			<p className="text-muted-foreground mb-4 leading-relaxed">
+				{description}
+			</p>
 			<div className="flex flex-wrap gap-2">
 				{technologies?.map(technology => (
 					<Technology key={technology} name={technology} />
