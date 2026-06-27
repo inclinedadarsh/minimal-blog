@@ -144,8 +144,13 @@ export const HEADER_LINKS: LinkType[] = [
 
 export const FOOTER_LINKS: LinkType[] = [
 	{
-		label: "rss.xml",
+		label: "rss",
 		href: "/rss.xml",
+		openInNewTab: true,
+	},
+	{
+		label: "sitemap",
+		href: "/sitemal.xml",
 		openInNewTab: true,
 	},
 	{
