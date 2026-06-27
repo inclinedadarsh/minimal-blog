@@ -8,14 +8,14 @@ export default function NotFound() {
 		<div className="flex flex-col items-start justify-center min-h-[60vh] space-y-6 py-10 md:py-20 animate-in fade-in duration-500">
 			<div className="space-y-4">
 				<div className="flex gap-3 items-end">
-					<h1 className="text-3xl md:text-[40px] font-semibold font-serif">
+					<h1 className="text-3xl md:text-[40px] font-semibold font-serif text-foreground-title">
 						Lost in the void.
 					</h1>
-					<span className="hidden sm:block text-muted-foreground font-mono uppercase tracking-wider font-medium text-sm mb-1.5 md:mb-2 text-nowrap">
+					<span className="hidden sm:block text-foreground-body font-mono uppercase tracking-wider font-medium text-sm mb-1.5 md:mb-2 text-nowrap">
 						{"{"}Error 404{"}"}
 					</span>
 				</div>
-				<p className="text-lg text-muted-foreground max-w-[500px]">
+				<p className="text-lg text-foreground-body max-w-[500px]">
 					The page you're looking for seems to have vanished. It might
 					have been removed, had its name changed, or is exploring the
 					multiverse.
@@ -32,12 +32,6 @@ export default function NotFound() {
 				>
 					<ArrowLeft className="h-4 w-4 group-hover:-translate-x-1 transition-transform" />
 					Return Home
-				</Link>
-				<Link
-					href="/blogs"
-					className={cn(buttonVariants({ variant: "outline" }))}
-				>
-					Read the Blog
 				</Link>
 			</div>
 
