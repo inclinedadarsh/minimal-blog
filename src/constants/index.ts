@@ -1,4 +1,8 @@
-import { deepmindLogo, wemakedevsLogo } from "@/assets/companies";
+import {
+	deepmindLogo,
+	tangentLabLogo,
+	wemakedevsLogo,
+} from "@/assets/companies";
 import {
 	awsLogo,
 	bunLogo,
@@ -98,6 +102,13 @@ export const TECHNOLOGIES = {
 
 export const EXPERIENCE_ITEMS: ExperienceItemType[] = [
 	{
+		companyName: "Tangent Lab",
+		companyLogo: tangentLabLogo,
+		workTitle: "One-person AI lab exploring tangents of AI research.",
+		workDuration: "May 2026 — Present",
+		compnayWebsite: "https://tangentlab.xyz",
+	},
+	{
 		companyName: "Google DeepMind",
 		companyLogo: deepmindLogo,
 		workTitle: "GSoC '25 contributor",
@@ -155,18 +166,8 @@ export const NAV_LINKS: LinkType[] = [
 		href: "/blogs",
 	},
 	{
-		label: "tangent",
-		href: "https://tangentlab.xyz",
-		openInNewTab: true,
-	},
-	{
 		label: "reading list",
 		href: "https://readinglist.adarshdubey.com",
-		openInNewTab: true,
-	},
-	{
-		label: "echo",
-		href: "https://echo.adarshdubey.com",
 		openInNewTab: true,
 	},
 ];

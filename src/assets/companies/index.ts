@@ -1,4 +1,5 @@
 import deepmindLogo from "./deepmind-logo.svg";
+import tangentLabLogo from "./tangentlab-logo.png";
 import wemakedevsLogo from "./wemakedevs-logo.svg";
 
-export { deepmindLogo, wemakedevsLogo };
+export { deepmindLogo, tangentLabLogo, wemakedevsLogo };
