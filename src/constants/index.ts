@@ -200,7 +200,7 @@ export const NAV_LINKS: LinkType[] = [
 	},
 	{
 		label: "reading list",
-		href: "https://readinglist.adarshdubey.com",
+		href: "https://adarsh.wtf/rl",
 		openInNewTab: true,
 	},
 ];
