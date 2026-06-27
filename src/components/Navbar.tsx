@@ -68,7 +68,7 @@ const Navbar = () => {
 						<li key={link.label}>
 							<Link
 								className={cn(
-									"text-foreground-body hover:text-foreground-title transition-colors block py-2",
+									"text-foreground-body hover:text-foreground-title transition-colors block py-2 font-mono",
 								)}
 								href={link.href}
 								target={link.openInNewTab ? "_blank" : "_self"}
