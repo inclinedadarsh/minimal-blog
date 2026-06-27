@@ -23,13 +23,15 @@ const ExperienceItem = ({
 					className="w-10 h-10 border border-border rounded-full group-hover:scale-110 transition-all duration-300"
 				/>
 				<div className="flex flex-col">
-					<h3 className="font-bold text-lg">{companyName}</h3>
-					<p className="text-sm md:text-base text-muted-foreground">
+					<h3 className="font-medium text-lg text-foreground-title">
+						{companyName}
+					</h3>
+					<p className="text-sm md:text-base text-foreground-body">
 						{workTitle}
 					</p>
 				</div>
 			</div>
-			<p className="text-sm text-muted-foreground max-[500px]:self-end font-mono uppercase tracking-wider font-medium">
+			<p className="text-sm text-foreground-body max-[500px]:self-end font-mono uppercase tracking-wider font-medium">
 				{workDuration}
 			</p>
 		</Link>

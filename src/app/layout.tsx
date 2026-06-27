@@ -46,7 +46,7 @@ export default function RootLayout({
 		<html lang="en" suppressHydrationWarning>
 			<body
 				className={
-					"font-sans antialiased max-w-2xl px-5 md:px-0 mx-auto"
+					"font-sans antialiased max-w-3xl px-5 md:px-0 mx-auto"
 				}
 			>
 				<ThemeProvider
