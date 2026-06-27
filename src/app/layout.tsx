@@ -4,8 +4,6 @@ import { Geist_Mono, Inter, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
-import { ThemeProvider } from "@/components/theme-provider";
-import { Toaster } from "@/components/ui/sonner";
 
 const _inter = Inter({
 	variable: "--font-inter",
@@ -46,20 +44,12 @@ export default function RootLayout({
 		<html lang="en" suppressHydrationWarning>
 			<body
 				className={
-					"font-sans antialiased max-w-3xl px-5 md:px-0 mx-auto"
+					"font-sans antialiased max-w-3xl px-5 md:px-0 mx-auto dark"
 				}
 			>
-				<ThemeProvider
-					attribute="class"
-					defaultTheme="system"
-					enableSystem
-					disableTransitionOnChange
-				>
-					<Navbar />
-					{children}
-					<Footer />
-					<Toaster richColors />
-				</ThemeProvider>
+				<Navbar />
+				{children}
+				<Footer />
 			</body>
 			{/* biome-ignore lint/style/noNonNullAssertion: from nextjs docs */}
 			<GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />
