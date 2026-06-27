@@ -5,7 +5,6 @@ import {
 } from "@/assets/companies";
 import {
 	awsLogo,
-	bunLogo,
 	claudeLogo,
 	cppLogo,
 	dockerLogo,
@@ -14,7 +13,6 @@ import {
 	geminiLogo,
 	gitLogo,
 	huggingFaceLogo,
-	kerasLogo,
 	nextjsLogo,
 	postgreLogo,
 	pythonLogo,
@@ -38,10 +36,6 @@ export const TECHNOLOGIES = {
 		name: "PyTorch",
 		logo: pytorchLogo,
 	},
-	keras: {
-		name: "Keras",
-		logo: kerasLogo,
-	},
 	huggingFace: {
 		name: "Hugging Face",
 		logo: huggingFaceLogo,
@@ -61,10 +55,6 @@ export const TECHNOLOGIES = {
 	typescript: {
 		name: "TypeScript",
 		logo: typescriptLogo,
-	},
-	bun: {
-		name: "Bun",
-		logo: bunLogo,
 	},
 	fastapi: {
 		name: "FastAPI",
@@ -104,7 +94,7 @@ export const EXPERIENCE_ITEMS: ExperienceItemType[] = [
 	{
 		companyName: "Tangent Lab",
 		companyLogo: tangentLabLogo,
-		workTitle: "One-person AI lab exploring tangents of AI research.",
+		workTitle: "Experimental one-person AI lab.",
 		workDuration: "May 2026 — Present",
 		compnayWebsite: "https://tangentlab.xyz",
 	},
@@ -140,15 +130,54 @@ export const HEADER_LINKS: LinkType[] = [
 		href: "https://linkedin.com/in/dubeyadarsh/",
 		openInNewTab: true,
 	},
-	{
-		label: "peerlist",
-		href: "https://peerlist.io/inclinedadarsh",
-		openInNewTab: true,
-	},
+	// {
+	// 	label: "peerlist",
+	// 	href: "https://peerlist.io/inclinedadarsh",
+	// 	openInNewTab: true,
+	// },
 	{
 		label: "cal.com",
 		href: "https://cal.com/adarshdubey",
 		openInNewTab: true,
+	},
+];
+
+export const FOOTER_LINKS: LinkType[] = [
+	{
+		label: "rss",
+		href: "/rss.xml",
+		openInNewTab: true,
+	},
+	{
+		label: "sitemap",
+		href: "/sitemap.xml",
+		openInNewTab: true,
+	},
+	{
+		label: "llms.txt",
+		href: "/llms.txt",
+		openInNewTab: true,
+	},
+];
+
+export const TOY_PROJECTS: ProjectItemType[] = [
+	{
+		name: "FastAPI MCP Inspect",
+		description:
+			"Mount an MCP server onto your FastAPI application to let AI agents inspect your routes, endpoints, and schemas at runtime.",
+		links: [
+			{
+				label: "github",
+				href: "https://github.com/inclinedadarsh/fastapi-mcp-inspect",
+				openInNewTab: true,
+			},
+			{
+				label: "pypi",
+				href: "https://pypi.org/project/fastapi-mcp-inspect/",
+				openInNewTab: true,
+			},
+		],
+		technologies: ["python", "fastapi"],
 	},
 ];
 
@@ -162,12 +191,16 @@ export const NAV_LINKS: LinkType[] = [
 		href: "/projects",
 	},
 	{
+		label: "toys",
+		href: "/toys",
+	},
+	{
 		label: "blogs",
 		href: "/blogs",
 	},
 	{
 		label: "reading list",
-		href: "https://readinglist.adarshdubey.com",
+		href: "https://adarsh.wtf/rl",
 		openInNewTab: true,
 	},
 ];
@@ -176,7 +209,7 @@ export const PROJECTS: ProjectItemType[] = [
 	{
 		name: "Facet: Gemma Finetuner",
 		description:
-			"An end-to-end platform that lets users preprocess datasets, fine-tune Gemma models, run inference, and export them in GGUF format, making model training and deployment simple and accessible.",
+			"An end-to-end platform that lets users preprocess datasets, fine-tune Gemma models, run inference, and export them in different formats.",
 		links: [
 			{
 				label: "github",
@@ -184,19 +217,12 @@ export const PROJECTS: ProjectItemType[] = [
 				openInNewTab: true,
 			},
 		],
-		technologies: [
-			"python",
-			"fastapi",
-			"huggingFace",
-			"docker",
-			"gcp",
-			"nextjs",
-		],
+		technologies: ["fastapi", "python", "nextjs", "huggingFace", "gcp"],
 	},
 	{
-		name: "Anon: Anonymous social media forum",
+		name: "Anon: Social Media Forum",
 		description:
-			"Anon Forum is a fully anonymous social platform for college students that enables posting, deleting, upvoting via an optimistic UI, and ensures anonymity through college verification with no personal data storage.",
+			"Anon Forum is an anonymous social platform for my college using optimistic UI, and ensures anonymity through college verification with no personal data storage.",
 		links: [
 			{
 				label: "github",
@@ -209,14 +235,7 @@ export const PROJECTS: ProjectItemType[] = [
 				openInNewTab: true,
 			},
 		],
-		technologies: [
-			"nextjs",
-			"fastapi",
-			"aws",
-			"postgresql",
-			"typescript",
-			"bun",
-		],
+		technologies: ["nextjs", "fastapi", "python", "aws", "postgresql"],
 	},
 	{
 		name: "Inclinet: Neural network library",

@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useState } from "react";
 import { NAV_LINKS } from "@/constants";
 import { cn } from "@/lib/utils";
-import { ThemeToggle } from "./ThemeToggle";
 
 const Navbar = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,6 +12,15 @@ const Navbar = () => {
 	return (
 		<nav id="navbar" className="py-5 md:py-10">
 			<div className="flex justify-between items-center">
+				<div className="flex items-center gap-4">
+					<div className="w-5 h-5 rounded-full bg-green-500" />
+					<Link
+						className="text-foreground-title px-2 py-1 rounded-sm border"
+						href="mailto:dubeyadarshmain@gmail.com"
+					>
+						Let's talk
+					</Link>
+				</div>
 				{/* Mobile menu button */}
 				<button
 					type="button"
@@ -29,7 +37,7 @@ const Navbar = () => {
 						<li key={link.label}>
 							<Link
 								className={cn(
-									"text-primary hover:text-primary/70 transition-colors",
+									"text-foreground-body hover:text-foreground-title transition-colors font-mono",
 								)}
 								href={link.href}
 								target={link.openInNewTab ? "_blank" : "_self"}
@@ -44,11 +52,6 @@ const Navbar = () => {
 						</li>
 					))}
 				</ul>
-
-				{/* Theme controls */}
-				<div className="flex items-center gap-4">
-					<ThemeToggle />
-				</div>
 			</div>
 
 			{/* Mobile navigation */}
@@ -65,7 +68,7 @@ const Navbar = () => {
 						<li key={link.label}>
 							<Link
 								className={cn(
-									"text-primary hover:text-primary/70 transition-colors block py-2",
+									"text-foreground-body hover:text-foreground-title transition-colors block py-2 font-mono",
 								)}
 								href={link.href}
 								target={link.openInNewTab ? "_blank" : "_self"}

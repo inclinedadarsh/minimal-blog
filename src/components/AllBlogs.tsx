@@ -2,6 +2,7 @@
 import { useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import type { BlogMetadata } from "@/lib/blogs";
+import { cn } from "@/lib/utils";
 import BlogItem from "./BlogItem";
 
 export default function AllBlogsClient({
@@ -36,11 +37,13 @@ export default function AllBlogsClient({
 					<button
 						type="button"
 						onClick={() => setSelectedTag(undefined)}
-						className={`text-sm px-2 py-1 rounded-md transition-colors ${
-							!selectedTag
-								? "bg-neutral-900 text-white dark:bg-white dark:text-black"
-								: "bg-muted/0 outline-2 outline-muted dark:bg-neutral-800 dark:outline-neutral-800 hover:bg-muted dark:hover:bg-neutral-700"
-						}`}
+						className={cn(
+							"text-sm px-2 py-[3px] transition-colors font-mono border",
+							!selectedTag &&
+								"bg-foreground-title/90 text-background",
+							selectedTag &&
+								"bg-background text-foreground-title",
+						)}
 					>
 						All
 					</button>
@@ -49,11 +52,13 @@ export default function AllBlogsClient({
 							type="button"
 							key={t}
 							onClick={() => setSelectedTag(t)}
-							className={`text-sm px-2 py-1 rounded-md transition-colors ${
-								selectedTag === t
-									? "bg-neutral-900 text-white dark:bg-white dark:text-black"
-									: "bg-muted/0 outline-2 outline-muted dark:bg-neutral-800 dark:outline-neutral-800 hover:bg-muted dark:hover:bg-neutral-700"
-							}`}
+							className={cn(
+								"text-sm px-2 py-[3px] transition-colors font-mono border",
+								selectedTag === t &&
+									"bg-foreground-title/90 text-background",
+								selectedTag !== t &&
+									"bg-background text-foreground-title",
+							)}
 						>
 							{t}
 						</button>

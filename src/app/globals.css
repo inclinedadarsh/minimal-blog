@@ -16,6 +16,8 @@
 	--radius-xl: calc(var(--radius) + 4px);
 	--color-background: var(--background);
 	--color-foreground: var(--foreground);
+	--color-foreground-title: var(--foreground-title);
+	--color-foreground-body: var(--foreground-body);
 	--color-card: var(--card);
 	--color-card-foreground: var(--card-foreground);
 	--color-popover: var(--popover);
@@ -56,6 +58,8 @@
 	--radius: 0.625rem;
 	--background: oklch(0.9668 0.0054 95.1);
 	--foreground: oklch(0.141 0.005 285.823);
+	--foreground-title: oklch(0.141 0.005 285.823);
+	--foreground-body: oklch(0.141 0.005 285.823);
 	--card: oklch(1 0 0);
 	--card-foreground: oklch(0.141 0.005 285.823);
 	--popover: oklch(1 0 0);
@@ -93,8 +97,10 @@
 }
 
 .dark {
-	--background: oklch(0.1776 0 0);
+	--background: oklch(0.1448 0 0);
 	--foreground: oklch(0.985 0 0);
+	--foreground-title: oklch(0.985 0 0);
+	--foreground-body: oklch(0.5555 0 0);
 	--card: oklch(0.21 0.006 285.885);
 	--card-foreground: oklch(0.985 0 0);
 	--popover: oklch(0.21 0.006 285.885);
@@ -137,7 +143,7 @@
 	}
 
 	body {
-		@apply bg-background text-foreground;
+		@apply bg-background text-foreground-body;
 	}
 
 	/* Bold text in markdown */
@@ -175,7 +181,7 @@
 
 	/* Paragraph spacing */
 	.prose p {
-		@apply my-4;
+		@apply my-4 text-muted-foreground;
 	}
 
 	/* Link styles */
@@ -227,7 +233,7 @@
 	}
 
 	.prose li {
-		@apply my-1.5 text-foreground;
+		@apply my-1.5 text-muted-foreground;
 	}
 
 	.prose li::marker {
@@ -263,11 +269,6 @@
 	/* Image styles */
 	.prose img {
 		@apply rounded-lg border border-neutral-200 dark:border-neutral-800;
-	}
-
-	/* Horizontal rule styles */
-	.prose hr {
-		@apply my-8 border-neutral-200 dark:border-neutral-800;
 	}
 
 	/* Blockquote styles */
