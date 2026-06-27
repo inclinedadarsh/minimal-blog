@@ -63,7 +63,7 @@ export default async function BlogPage({
 	return (
 		<div className="">
 			<article className="prose prose-neutral dark:prose-invert max-w-none mt-5">
-				<h1 className="text-3xl md:text-[40px] font-semibold font-serif">
+				<h1 className="text-3xl md:text-[40px] font-semibold font-serif text-foreground-title">
 					{blog.title}
 				</h1>
 				<time
@@ -82,7 +82,7 @@ export default async function BlogPage({
 							<Link
 								key={tag}
 								href={`/blogs?tag=${tag}`}
-								className="text-sm px-2 py-1 bg-muted/0 outline-2 outline-muted dark:bg-neutral-800 dark:outline-neutral-800 rounded-md hover:bg-muted dark:hover:bg-neutral-700 transition-colors"
+								className="text-sm border border-border font-mono px-2 py-1 hover:text-muted-foreground hover:border-muted-foreground/60 transition-colors"
 							>
 								{tag}
 							</Link>
@@ -112,7 +112,7 @@ export default async function BlogPage({
 						</div>
 					)}
 					<div className="p-4 border border-border rounded-md space-y-2 flex-1">
-						<p className="font-medium">
+						<p className="font-medium text-muted-foreground">
 							Are you an AI? Or just love plain text? Read the
 							LLM-friendly pure markdown version.
 						</p>
@@ -122,6 +122,7 @@ export default async function BlogPage({
 								buttonVariants({
 									variant: "outline",
 								}),
+								"text-foreground",
 							)}
 							target="_blank"
 						>
@@ -130,7 +131,6 @@ export default async function BlogPage({
 					</div>
 				</div>
 				<div className="mt-6">{content}</div>
-				<hr className="my-6 border-neutral-200 dark:border-neutral-800" />
 			</article>
 		</div>
 	);
