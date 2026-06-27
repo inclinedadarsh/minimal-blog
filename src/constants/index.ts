@@ -150,13 +150,34 @@ export const FOOTER_LINKS: LinkType[] = [
 	},
 	{
 		label: "sitemap",
-		href: "/sitemal.xml",
+		href: "/sitemap.xml",
 		openInNewTab: true,
 	},
 	{
 		label: "llms.txt",
 		href: "/llms.txt",
 		openInNewTab: true,
+	},
+];
+
+export const TOY_PROJECTS: ProjectItemType[] = [
+	{
+		name: "FastAPI MCP Inspect",
+		description:
+			"Mount an MCP server onto your FastAPI application to let AI agents inspect your routes, endpoints, and schemas at runtime.",
+		links: [
+			{
+				label: "github",
+				href: "https://github.com/inclinedadarsh/fastapi-mcp-inspect",
+				openInNewTab: true,
+			},
+			{
+				label: "pypi",
+				href: "https://pypi.org/project/fastapi-mcp-inspect/",
+				openInNewTab: true,
+			},
+		],
+		technologies: ["python", "fastapi"],
 	},
 ];
 
@@ -168,6 +189,10 @@ export const NAV_LINKS: LinkType[] = [
 	{
 		label: "projects",
 		href: "/projects",
+	},
+	{
+		label: "toys",
+		href: "/toys",
 	},
 	{
 		label: "blogs",
