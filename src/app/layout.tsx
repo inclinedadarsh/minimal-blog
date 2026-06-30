@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import { HackModeProvider } from "@/contexts/hack-mode";
 
 const _inter = Inter({
 	variable: "--font-inter",
@@ -47,9 +48,11 @@ export default function RootLayout({
 					"font-sans antialiased max-w-3xl px-5 md:px-0 mx-auto dark"
 				}
 			>
-				<Navbar />
-				{children}
-				<Footer />
+				<HackModeProvider>
+					<Navbar />
+					{children}
+					<Footer />
+				</HackModeProvider>
 				<Script
 					async
 					data-website-id={process.env.NEXT_PUBLIC_UMAMI_ID || ""}

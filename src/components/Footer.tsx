@@ -9,10 +9,12 @@ const Footer = () => {
 			className="mt-10 md:mt-16 py-8 border-t border-border flex flex-col md:flex-row md:items-center justify-between gap-4"
 		>
 			<Link
-				href="mailto:dubeyadarshmain@gmail.com"
+				href="https://cal.com/adarshdubey"
+				target="_blank"
+				rel="noopener noreferrer"
 				className="text-foreground-title px-2 py-1 border border-border rounded-sm leading-[150%] hover:border-foreground-body/40 transition-colors w-fit"
 			>
-				Let's talk?
+				Let's talk
 			</Link>
 			<div className="flex gap-x-4 md:gap-6">
 				{FOOTER_LINKS.map(link => (

@@ -5,10 +5,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { NAV_LINKS } from "@/constants";
+import { useHackMode } from "@/contexts/hack-mode";
 import { cn } from "@/lib/utils";
 
 const Navbar = () => {
 	const pathname = usePathname();
+	const { isHackMode, toggleHackMode } = useHackMode();
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	const isActive = (href: string) => {
@@ -20,10 +22,22 @@ const Navbar = () => {
 		<nav id="navbar" className="py-5 md:py-10">
 			<div className="flex justify-between items-center">
 				<div className="flex items-center gap-4">
-					<div className="w-5 h-5 rounded-full bg-green-500" />
+					<button
+						type="button"
+						className={cn(
+							"w-5 h-5 rounded-full transition-all duration-300 cursor-pointer",
+							isHackMode
+								? "bg-black shadow-[0_0_6px_#00ff00] animate-pulse"
+								: "bg-green-500",
+						)}
+						onClick={toggleHackMode}
+						aria-label="Toggle hack mode"
+					/>
 					<Link
 						className="text-foreground-title px-2 py-1 rounded-sm border"
-						href="mailto:dubeyadarshmain@gmail.com"
+						href="https://cal.com/adarshdubey"
+						target="_blank"
+						rel="noopener noreferrer"
 					>
 						Let's talk
 					</Link>
