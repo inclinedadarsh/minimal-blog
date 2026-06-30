@@ -12,7 +12,6 @@
 		"postbuild": "next-sitemap"
 	},
 	"dependencies": {
-		"@next/third-parties": "16.1.6",
 		"@radix-ui/react-label": "^2.1.8",
 		"@radix-ui/react-slot": "^1.2.4",
 		"@types/rss": "^0.0.32",

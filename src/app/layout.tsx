@@ -1,6 +1,6 @@
-import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import { Geist_Mono, Inter, Source_Serif_4 } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
@@ -50,9 +50,12 @@ export default function RootLayout({
 				<Navbar />
 				{children}
 				<Footer />
+				<Script
+					async
+					data-website-id={process.env.NEXT_PUBLIC_UMAMI_ID || ""}
+					strategy="afterInteractive"
+				/>
 			</body>
-			{/* biome-ignore lint/style/noNonNullAssertion: from nextjs docs */}
-			<GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />
 		</html>
 	);
 }
