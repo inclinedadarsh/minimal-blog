@@ -2,12 +2,19 @@
 
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { NAV_LINKS } from "@/constants";
 import { cn } from "@/lib/utils";
 
 const Navbar = () => {
+	const pathname = usePathname();
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+	const isActive = (href: string) => {
+		if (href === "/") return pathname === "/";
+		return pathname.startsWith(href);
+	};
 
 	return (
 		<nav id="navbar" className="py-5 md:py-10">
@@ -37,7 +44,10 @@ const Navbar = () => {
 						<li key={link.label}>
 							<Link
 								className={cn(
-									"text-foreground-body hover:text-foreground-title transition-colors font-mono",
+									isActive(link.href)
+										? "text-foreground-title"
+										: "text-foreground-body",
+									"hover:text-foreground-title transition-colors font-mono",
 								)}
 								href={link.href}
 								target={link.openInNewTab ? "_blank" : "_self"}
@@ -68,7 +78,10 @@ const Navbar = () => {
 						<li key={link.label}>
 							<Link
 								className={cn(
-									"text-foreground-body hover:text-foreground-title transition-colors block py-2 font-mono",
+									isActive(link.href)
+										? "text-foreground-title"
+										: "text-foreground-body",
+									"hover:text-foreground-title transition-colors block py-2 font-mono",
 								)}
 								href={link.href}
 								target={link.openInNewTab ? "_blank" : "_self"}
