@@ -27,4 +27,5 @@ export type ProjectItemType = {
 	description: string;
 	links: LinkType[];
 	technologies?: TechnologyNameType[];
+	tags?: string[];
 };

@@ -178,6 +178,91 @@ export const TOY_PROJECTS: ProjectItemType[] = [
 			},
 		],
 		technologies: ["python", "fastapi"],
+		tags: ["package"],
+	},
+	{
+		name: "Inclitoken: BPE Tokenizer",
+		description:
+			"A simple Byte Pair Encoding (BPE) tokenizer implementation from scratch in Python, with custom training and encode/decode capabilities.",
+		links: [
+			{
+				label: "github",
+				href: "https://github.com/inclinedadarsh/inclitoken",
+				openInNewTab: true,
+			},
+		],
+		technologies: ["python"],
+		tags: ["from scratch"],
+	},
+	{
+		name: "Incliarray: N-dimensional Array Library",
+		description:
+			"PyTorch-like minimal N-dimensional float array library in C++ with row-major layout, stride-aware indexing, broadcasting, matmul, reductions, and lightweight reverse-mode autograd.",
+		links: [
+			{
+				label: "github",
+				href: "https://github.com/inclinedadarsh/incliarray",
+				openInNewTab: true,
+			},
+		],
+		technologies: ["cpp"],
+		tags: ["from scratch"],
+	},
+	{
+		name: "pplx-cli",
+		description:
+			"A powerful CLI tool for the Perplexity AI API — web search, AI chat, streaming, citations, and support for multiple models (Sonar, Sonar Pro, Reasoning).",
+		links: [
+			{
+				label: "github",
+				href: "https://github.com/inclinedadarsh/pplx-cli",
+				openInNewTab: true,
+			},
+		],
+		technologies: ["typescript"],
+		tags: ["cli"],
+	},
+	{
+		name: "K-Means Clustering in C",
+		description:
+			"Educational implementation of the k-means clustering algorithm in C using a custom Matrix struct.",
+		links: [
+			{
+				label: "github",
+				href: "https://github.com/inclinedadarsh/k-means-c",
+				openInNewTab: true,
+			},
+		],
+		technologies: ["cpp"],
+		tags: ["from scratch"],
+	},
+	{
+		name: "Logistic Regression in C",
+		description:
+			"Modular implementation of logistic regression with forward/backward pass approach, mimicking neural network style — all in C.",
+		links: [
+			{
+				label: "github",
+				href: "https://github.com/inclinedadarsh/logistic-regression-c",
+				openInNewTab: true,
+			},
+		],
+		technologies: ["cpp"],
+		tags: ["from scratch"],
+	},
+	{
+		name: "Neural Network in C",
+		description:
+			"Basic neural network implementations in C including a linear neuron (perceptron), non-linear single-layer network (OR gate), and multi-layer network (XOR gate).",
+		links: [
+			{
+				label: "github",
+				href: "https://github.com/inclinedadarsh/neural-network-in-c",
+				openInNewTab: true,
+			},
+		],
+		technologies: ["cpp"],
+		tags: ["from scratch"],
 	},
 ];
 
