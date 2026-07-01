@@ -276,10 +276,6 @@ export const NAV_LINKS: LinkType[] = [
 		href: "/projects",
 	},
 	{
-		label: "toys",
-		href: "/toys",
-	},
-	{
 		label: "blogs",
 		href: "/blogs",
 	},
