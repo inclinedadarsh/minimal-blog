@@ -34,7 +34,7 @@ const Navbar = () => {
 						aria-label="Toggle hack mode"
 					/>
 					<Link
-						className="text-foreground-title px-2 py-1 rounded-sm border"
+						className="text-foreground-title px-2 py-1 border border-border rounded-sm leading-[150%] hover:border-foreground-body/40 transition-colors w-fit"
 						href="https://cal.com/adarshdubey"
 						target="_blank"
 						rel="noopener noreferrer"
