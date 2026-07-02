@@ -281,8 +281,7 @@ export const NAV_LINKS: LinkType[] = [
 	},
 	{
 		label: "reading list",
-		href: "https://adarsh.wtf/rl",
-		openInNewTab: true,
+		href: "/reading",
 	},
 ];
 

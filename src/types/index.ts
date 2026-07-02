@@ -29,3 +29,18 @@ export type ProjectItemType = {
 	technologies?: TechnologyNameType[];
 	tags?: string[];
 };
+
+export type ColumnDef = {
+	id: string;
+	name: string;
+	type: string;
+	isLink?: boolean;
+	options?: { id: string; name: string }[];
+};
+
+export type Row = {
+	id: string;
+	cells: Record<string, string | null>;
+	createdTime: string;
+	lastEditedTime: string;
+};
