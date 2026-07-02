@@ -20,26 +20,22 @@ export default function DevlogCard({
 					onClick();
 				}
 			}}
-			className="text-left p-4 border-border border cursor-pointer hover:bg-zinc-900/40"
+			className="text-left p-4 border-border border cursor-pointer hover:bg-zinc-900/40 flex flex-col"
 		>
-			<div>
-				<div className="flex gap-4 items-center justify-between font-mono">
-					<time dateTime={devlog.date} className="">
-						{new Date(devlog.date).toLocaleDateString("en-US", {
-							year: "numeric",
-							month: "short",
-							day: "numeric",
-						})}
-					</time>
-					<span className="text-foreground-title">
-						#{devlog.number}
-					</span>
-				</div>
-				<h3 className="text-foreground-title text-xl font-medium mt-1">
-					{devlog.title}
-				</h3>
-				<p className="mt-4">{devlog.description}</p>
+			<div className="flex gap-4 items-center justify-between font-mono">
+				<time dateTime={devlog.date} className="">
+					{new Date(devlog.date).toLocaleDateString("en-US", {
+						year: "numeric",
+						month: "short",
+						day: "numeric",
+					})}
+				</time>
+				<span className="text-foreground-title">#{devlog.number}</span>
 			</div>
+			<h3 className="text-foreground-title text-xl font-medium mt-1 min-h-[3.5rem]">
+				{devlog.title}
+			</h3>
+			<p className="mt-4">{devlog.description}</p>
 		</button>
 	);
 }

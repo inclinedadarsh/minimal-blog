@@ -237,7 +237,7 @@
 
 	/* Paragraph spacing */
 	.prose p {
-		@apply my-4 text-muted-foreground;
+		@apply my-4 first:mt-0 last:mb-0 text-muted-foreground;
 	}
 
 	/* Link styles */

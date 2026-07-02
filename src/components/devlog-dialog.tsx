@@ -57,7 +57,7 @@ export default function DevlogDialog({
 	return (
 		<Dialog open={open} onOpenChange={onOpenChange} modal={false}>
 			<DialogContent className="sm:max-w-2xl max-h-[85vh] overflow-y-auto">
-				<DialogHeader>
+				<DialogHeader className="border-b border-border pb-3">
 					<DialogTitle className="text-xl text-foreground-title">
 						{title}
 					</DialogTitle>
