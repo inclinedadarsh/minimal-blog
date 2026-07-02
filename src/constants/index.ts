@@ -280,6 +280,10 @@ export const NAV_LINKS: LinkType[] = [
 		href: "/blogs",
 	},
 	{
+		label: "logs",
+		href: "/logs",
+	},
+	{
 		label: "reading list",
 		href: "/reading",
 	},
