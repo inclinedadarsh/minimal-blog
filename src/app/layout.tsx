@@ -45,7 +45,7 @@ export default function RootLayout({
 		<html lang="en" suppressHydrationWarning>
 			<body
 				className={
-					"font-sans antialiased max-w-3xl px-5 md:px-0 mx-auto dark"
+					"font-sans antialiased max-w-3xl px-5 lg:px-0 mx-auto dark"
 				}
 			>
 				<HackModeProvider>
