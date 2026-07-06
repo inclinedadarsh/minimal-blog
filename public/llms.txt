@@ -1,63 +1,196 @@
 # llms.txt for https://adarshdubey.com
-# Generated: 2025-02-22
+# Generated: 2026-07-06
 # See https://llmstxt.org/ for specification
 
 ## SITE
 Name: Adarsh Dubey
-Description: Personal portfolio blog of a Full Stack AI Engineer
+Description: Personal portfolio and blog of a Full Stack AI Engineer
 Author: Adarsh Dubey
 URL: https://adarshdubey.com
 
 ## CONTENT
-Type: Technical blog posts, project documentation, tutorials, and research notes
+Type: Technical blog posts, project documentation, devlogs, reading list, and experimental projects
 Topics: Machine learning, deep learning, NLP/LLMs (BPE tokenization, fine-tuning, SLMs),
-        web development (Next.js, React, TypeScript, Tailwind CSS), system design,
-        tooling and infrastructure, developer productivity, open source contributions
+        web development (Next.js, React, TypeScript, FastAPI, Tailwind CSS), system design,
+        MCP (Model Context Protocol), autograd engines, tooling and infrastructure,
+        developer productivity, GSoC, open source contributions
 Content style: Practical, hands-on tutorials with code examples; deep dives into ML concepts;
-               project post-mortems and build logs; opinion pieces on industry trends
-Blog posts: 20+ published articles covering:
+              project post-mortems and build logs; GSoC journey reports; opinion pieces
+Pages: 6 main sections:
+    / (home) — landing page with header, career highlights, top 5 blog posts
+    /projects — portfolio projects + experimental/toy projects + technologies used
+    /blogs — 18 published articles with tag-based filtering
+    /logs — devlogs (fetched from GitHub)
+    /reading — curated reading list (blogs, books, resources)
+Blog posts cover:
+    - MCP server for FastAPI
     - BPE tokenizer implementations and theory
-    - Gemma model fine-tuning and optimization
-    - Small language model research
-    - Next.js and React best practices
-    - NumPy and autograd systems
-    - Terminal workflow and developer tools
+    - Gemma model fine-tuning and GSoC journey (community bonding, midterm, final report)
+    - Small language model revolution
+    - Next.js and AutoSend newsletter app
+    - NumPy and batch processing
+    - Terminal workflow, UX laws, code formatting tools
+    - College clubs, Comment Mind, Syncloop
+    - First steps in machine learning
 Projects documented:
     - Facet: Gemma finetuner with efficiency focus
-    - Incligrad: Custom autograd engine
-    - Inclinet: Scratch-built neural network library
+    - Incliarray: Custom N-dimensional array library in C++
     - Anon: Privacy-first anonymous forum
+    - Inclinet: Scratch-built neural network library
+    - FastAPI MCP Inspect: MCP server integration for FastAPI
+    - Inclitoken: BPE tokenizer from scratch
+    - pplx-cli: Perplexity AI CLI tool
+    - Various C++ ML scratch implementations (k-means, logistic regression, neural networks, incligrad autograd)
 License: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 (CC BY-NC-SA 4.0)
 RSS Feed: https://adarshdubey.com/rss.xml
 Sitemap: https://adarshdubey.com/sitemap.xml
 
 ## OWNER
 Name: Adarsh Dubey
-Bio: Full Stack AI Engineer and Machine Learning Engineer with a passion for building
-     in public and exploring the frontiers of LLMs. Currently contributing to Google DeepMind
-     as a GSoC '25 contributor and serving as a core team member at WeMakeDevs community.
+Bio: Full Stack AI Engineer with a passion for building in public and exploring
+     the frontiers of LLMs. Recently completed GSoC '25 with Google DeepMind,
+     currently exploring the tangents of AI from Tangent Lab. Core team member
+     at the WeMakeDevs community.
 
-     Expertise spans machine learning, natural language processing, and modern web development.
-     Actively researching and experimenting with small language models, fine-tuning techniques,
-     and efficient inference methods. In web development, specializes in Next.js, React, TypeScript,
-     and building performant, accessible user interfaces.
+     Expertise spans machine learning, natural language processing, and modern
+     web development. Actively researching and experimenting with small language
+     models, fine-tuning techniques, MCP servers, and efficient inference methods.
+     Speaks at tech meetups, writes technical blog posts, and when not coding,
+     plays badminton or enjoys misal pav.
 
      Notable open source projects:
-     - Facet: A Gemma finetuning tool for efficient model adaptation
-     - Anon: An anonymous discussion platform built for privacy-focused communities
-     - Inclinet: A custom neural network library from scratch
-     - Incligrad: An automatic differentiation engine for gradient computation
+     - Facet: An end-to-end Gemma fine-tuning platform
+     - Incliarray: PyTorch-like N-dimensional float array library in C++
+     - Anon: Anonymous discussion platform for privacy-focused communities
+     - Inclinet: Neural network library from scratch in Python
+     - FastAPI MCP Inspect: Mount MCP servers onto FastAPI applications
+     - Inclitoken: BPE tokenizer implementation from scratch
+     - pplx-cli: CLI tool for the Perplexity AI API
 
-     Philosophy: Strong advocate for open source, developer education, and sharing knowledge
-     through technical blog posts and community contributions. Believes in the power of
-     transparent, reproducible research and development.
+     Philosophy: Strong advocate for open source, developer education, and sharing
+     knowledge through technical blog posts and community contributions.
 
 Contact:
   - GitHub: https://github.com/inclinedadarsh
   - LinkedIn: https://linkedin.com/in/dubeyadarsh/
-  - Twitter: https://x.com/inclinedadarsh
+  - Twitter/X: https://x.com/inclinedadarsh
   - Website: https://adarshdubey.com
   - Cal.com: https://cal.com/adarshdubey
+
+## EXPERIENCE
+Current:
+  - Tangent Lab: Experimental one-person AI lab (May 2026 — Present)
+    Website: https://tangentlab.xyz
+
+Past:
+  - Google DeepMind: GSoC '25 contributor (May 2025 — Sept 2025)
+    Website: https://deepmind.google
+  - WeMakeDevs: Web developer & core team member (2023 — 2025)
+    Website: https://wemakedevs.org
+
+## PORTFOLIO PROJECTS
+1. Facet: Gemma Finetuner
+   Description: End-to-end platform that lets users preprocess datasets, fine-tune
+                Gemma models, run inference, and export them in different formats.
+   Technologies: FastAPI, Python, Next.js, Hugging Face, GCP
+   Links: https://github.com/gemma-facet
+
+2. Incliarray: N-dimensional Array Library
+   Description: PyTorch-like minimal N-dimensional float array library in C++ with
+                row-major layout, stride-aware indexing, broadcasting, matmul,
+                reductions, and lightweight reverse-mode autograd.
+   Technologies: C++
+   Links: https://github.com/inclinedadarsh/incliarray
+
+3. Anon: Social Media Forum
+   Description: Anonymous social platform using optimistic UI with college
+                verification and no personal data storage.
+   Technologies: Next.js, FastAPI, Python, AWS, PostgreSQL
+   Links: https://github.com/inclinedadarsh/anon | https://anon.adarshdubey.com
+
+4. Inclinet: Neural Network Library
+   Description: Neural network library from scratch in Python with PyTorch-like
+                APIs, supporting multiple activation functions, losses, and optimizers.
+   Technologies: Python
+   Links: https://github.com/inclinedadarsh/inclinet
+
+## EXPERIMENTAL / TOY PROJECTS
+1. FastAPI MCP Inspect
+   Description: Mount an MCP server onto your FastAPI application to let AI agents
+                inspect your routes, endpoints, and schemas at runtime.
+   Technologies: Python, FastAPI
+   Links: https://github.com/inclinedadarsh/fastapi-mcp-inspect | https://pypi.org/project/fastapi-mcp-inspect/
+
+2. Inclitoken: BPE Tokenizer
+   Description: Byte Pair Encoding tokenizer implementation from scratch in Python
+                with custom training and encode/decode capabilities.
+   Technologies: Python
+   Links: https://github.com/inclinedadarsh/inclitoken
+
+3. pplx-cli
+   Description: CLI tool for the Perplexity AI API — web search, AI chat, streaming,
+                citations, and support for multiple models (Sonar, Sonar Pro, Reasoning).
+   Technologies: TypeScript
+   Links: https://github.com/inclinedadarsh/pplx-cli
+
+4. K-Means Clustering in C
+   Description: Educational implementation of k-means clustering algorithm in C
+                using a custom Matrix struct.
+   Technologies: C++
+   Links: https://github.com/inclinedadarsh/k-means-c
+
+5. Logistic Regression in C
+   Description: Modular logistic regression with forward/backward pass approach,
+                mimicking neural network style — all in C.
+   Technologies: C++
+   Links: https://github.com/inclinedadarsh/logistic-regression-c
+
+6. Neural Network in C
+   Description: Basic neural network implementations including linear neuron
+                (perceptron), non-linear single-layer network (OR gate), and
+                multi-layer network (XOR gate).
+   Technologies: C++
+   Links: https://github.com/inclinedadarsh/neural-network-in-c
+
+7. Incligrad: Autograd Engine in C++
+   Description: PyTorch-like autograd library in C++ from scratch, including full
+                backpropagation logic for gradient-based learning.
+   Technologies: C++
+   Links: https://github.com/inclinedadarsh/incligrad
+
+## BLOG POSTS (18 articles)
+
+Latest posts:
+1. How I Built an MCP Server for FastAPI (2026-06-28)
+2. Building A BPE Tokenizer from Scratch (2026-01-30)
+3. Building a Newsletter App with Next.js and AutoSend (2025-11-23)
+4. GSoC 2025 Project Report: Building Gemma Facet (2025-09-14)
+5. The Small Language Model Revolution (2025-08-22)
+6. GSoC Midterm: Project Overview and Updates (2025-07-24)
+7. Learning Batch Processing the Hard Way (2025-06-25)
+8. Meeting My Peers at Google DeepMind (2025-06-02)
+9. Landing GSoC 2025 with Google DeepMind (2025-05-14)
+10. Nights & Weekends Chronicles: Week 1 (2024-04-15)
+11. College clubs and events — Are they even worth it? (2024-04-11)
+12. First Steps Towards Learning Machine Learning (2025-01-28)
+13. Embracing Syncloop's Simplicity (2023-07-30)
+14. Seamless Code Formatting: ESLint, Prettier, Husky & Lint-staged (2023-07-01)
+15. Comment Mind — Analyze YouTube Comments (2023-04-29)
+16. Terminal Basics: A Comprehensive Guide for Beginners (2023-03-19)
+17. Getting started with NumPy & NumPy Arrays (2023-01-24)
+18. UX Design laws every developer should know (2022-11-10)
+
+Full list: https://adarshdubey.com/blogs
+RSS: https://adarshdubey.com/rss.xml
+
+## TECHNOLOGIES
+- Python, PyTorch, Hugging Face
+- C++
+- React.js, Next.js, TypeScript
+- FastAPI, PostgreSQL
+- AWS, GCP, Docker
+- Gemini, Claude
+- Git
 
 ## AI USAGE POLICY
 Allowed: Yes, with attribution
@@ -69,6 +202,6 @@ Not Allowed: Commercial use without explicit permission
 Contact for permissions: DM on Twitter/X (@inclinedadarsh) or GitHub
 
 ## TECHNICAL
-Stack: Next.js 16, React 19, TypeScript, Tailwind CSS v4
-CMS: Markdown files (MDX) stored in repository
+Stack: Next.js, React, TypeScript, Tailwind CSS
+CMS: Markdown files stored in src/blogs/
 Update frequency: Regular (blog posts ~monthly, commits frequent)
