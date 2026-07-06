@@ -195,20 +195,6 @@ export const TOY_PROJECTS: ProjectItemType[] = [
 		tags: ["from scratch"],
 	},
 	{
-		name: "Incliarray: N-dimensional Array Library",
-		description:
-			"PyTorch-like minimal N-dimensional float array library in C++ with row-major layout, stride-aware indexing, broadcasting, matmul, reductions, and lightweight reverse-mode autograd.",
-		links: [
-			{
-				label: "github",
-				href: "https://github.com/inclinedadarsh/incliarray",
-				openInNewTab: true,
-			},
-		],
-		technologies: ["cpp"],
-		tags: ["from scratch"],
-	},
-	{
 		name: "pplx-cli",
 		description:
 			"A powerful CLI tool for the Perplexity AI API — web search, AI chat, streaming, citations, and support for multiple models (Sonar, Sonar Pro, Reasoning).",
@@ -264,6 +250,20 @@ export const TOY_PROJECTS: ProjectItemType[] = [
 		technologies: ["cpp"],
 		tags: ["from scratch"],
 	},
+	{
+		name: "Incligrad: Autograd engine in C++",
+		description:
+			"Implemented a PyTorch-like autograd library in C++ from scratch, including full backpropagation logic, enabling gradient-based learning without relying on existing frameworks.",
+		links: [
+			{
+				label: "github",
+				href: "https://github.com/inclinedadarsh/incligrad",
+				openInNewTab: true,
+			},
+		],
+		technologies: ["cpp"],
+		tags: ["from scratch"],
+	},
 ];
 
 export const NAV_LINKS: LinkType[] = [
@@ -304,6 +304,19 @@ export const PROJECTS: ProjectItemType[] = [
 		technologies: ["fastapi", "python", "nextjs", "huggingFace", "gcp"],
 	},
 	{
+		name: "Incliarray: N-dimensional Array Library",
+		description:
+			"PyTorch-like minimal N-dimensional float array library in C++ with row-major layout, stride-aware indexing, broadcasting, matmul, reductions, and lightweight reverse-mode autograd.",
+		links: [
+			{
+				label: "github",
+				href: "https://github.com/inclinedadarsh/incliarray",
+				openInNewTab: true,
+			},
+		],
+		technologies: ["cpp"],
+	},
+	{
 		name: "Anon: Social Media Forum",
 		description:
 			"Anon Forum is an anonymous social platform for my college using optimistic UI, and ensures anonymity through college verification with no personal data storage.",
@@ -333,18 +346,5 @@ export const PROJECTS: ProjectItemType[] = [
 			},
 		],
 		technologies: ["python"],
-	},
-	{
-		name: "Incligrad: Autograd engine in C++",
-		description:
-			"Implemented a PyTorch-like autograd library in C++ from scratch, including full backpropagation logic, enabling gradient-based learning without relying on existing frameworks.",
-		links: [
-			{
-				label: "github",
-				href: "https://github.com/inclinedadarsh/incligrad",
-				openInNewTab: true,
-			},
-		],
-		technologies: ["cpp"],
 	},
 ];
