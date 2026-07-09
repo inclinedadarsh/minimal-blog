@@ -140,6 +140,11 @@ export const HEADER_LINKS: LinkType[] = [
 		href: "https://cal.com/adarshdubey",
 		openInNewTab: true,
 	},
+	{
+		label: "substack",
+		href: "https://theneuron.substack.com",
+		openInNewTab: true,
+	},
 ];
 
 export const FOOTER_LINKS: LinkType[] = [
