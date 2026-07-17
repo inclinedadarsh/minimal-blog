@@ -1,8 +1,10 @@
 "use client";
 
-import { Loader2 } from "lucide-react";
+import { Columns3, Loader2, Table } from "lucide-react";
 import { useEffect, useState } from "react";
+import ReadingKanban from "@/components/ReadingKanban";
 import ReadingTable from "@/components/ReadingTable";
+import { cn } from "@/lib/utils";
 import type { ColumnDef, Row } from "@/types";
 
 export default function ReadingPage() {
@@ -12,6 +14,7 @@ export default function ReadingPage() {
 	} | null>(null);
 	const [error, setError] = useState<string | null>(null);
 	const [loading, setLoading] = useState(true);
+	const [view, setView] = useState<"table" | "board">("table");
 
 	useEffect(() => {
 		fetch("/api/reading")
@@ -58,7 +61,44 @@ export default function ReadingPage() {
 			) : error ? (
 				<p className="text-red-400">{error}</p>
 			) : data ? (
-				<ReadingTable columns={data.columns} rows={data.rows} />
+				<div>
+					<div className="flex items-center gap-1 mb-4 border border-border rounded-md p-0.5 w-fit">
+						<button
+							type="button"
+							onClick={() => setView("table")}
+							className={cn(
+								"inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded transition-colors",
+								view === "table"
+									? "bg-muted text-foreground-title"
+									: "text-foreground-body hover:text-foreground-title",
+							)}
+						>
+							<Table className="size-3.5" />
+							Table
+						</button>
+						<button
+							type="button"
+							onClick={() => setView("board")}
+							className={cn(
+								"inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded transition-colors",
+								view === "board"
+									? "bg-muted text-foreground-title"
+									: "text-foreground-body hover:text-foreground-title",
+							)}
+						>
+							<Columns3 className="size-3.5" />
+							Board
+						</button>
+					</div>
+					{view === "table" ? (
+						<ReadingTable columns={data.columns} rows={data.rows} />
+					) : (
+						<ReadingKanban
+							columns={data.columns}
+							rows={data.rows}
+						/>
+					)}
+				</div>
 			) : null}
 		</div>
 	);
