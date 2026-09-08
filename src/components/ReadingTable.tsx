@@ -1,6 +1,12 @@
 "use client";
 
-import { ArrowDown, ArrowUp, ChevronDown, Search } from "lucide-react";
+import {
+	ArrowDown,
+	ArrowUp,
+	ChevronDown,
+	ExternalLink,
+	Search,
+} from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
 	Table,
@@ -142,6 +148,7 @@ export default function ReadingTable({
 	} | null>(null);
 
 	const colorMap = useMemo(() => buildColorMap(columns), [columns]);
+	const linkCol = useMemo(() => columns.find(c => c.isLink), [columns]);
 
 	const hasActiveFilters = search || Object.keys(filters).length > 0 || sort;
 
@@ -271,7 +278,9 @@ export default function ReadingTable({
 								key={col.name}
 								className={cn(
 									"cursor-pointer select-none",
-									col.type === "title" && "max-w-[250px]",
+									col.type === "title" &&
+										"min-w-[280px] md:min-w-[360px]",
+									col.isLink && "w-[140px]",
 								)}
 								onClick={() => toggleSort(col.name)}
 							>
@@ -306,17 +315,18 @@ export default function ReadingTable({
 										key={col.name}
 										className={cn(
 											col.type === "title" &&
-												"max-w-[250px] whitespace-normal font-medium",
+												"min-w-[280px] md:min-w-[360px] whitespace-normal font-medium",
+											col.isLink && "w-[140px]",
 										)}
 									>
-										{col.type === "select" ||
-										col.type === "status"
-											? renderTag(
-													row.cells[col.name],
-													col.name,
-													colorMap,
-												)
-											: (row.cells[col.name] ?? "—")}
+										{renderCell(
+											col,
+											row.cells[col.name],
+											linkCol
+												? row.cells[linkCol.name]
+												: null,
+											colorMap,
+										)}
 									</TableCell>
 								))}
 							</TableRow>
@@ -325,6 +335,54 @@ export default function ReadingTable({
 				</TableBody>
 			</Table>
 		</div>
+	);
+}
+
+function renderCell(
+	col: ColumnDef,
+	value: string | null,
+	href: string | null,
+	colorMap: Map<string, number>,
+) {
+	if (col.type === "select" || col.type === "status") {
+		return renderTag(value, col.name, colorMap);
+	}
+	if (col.isLink) {
+		return renderLink(value);
+	}
+	if (col.type === "title" && value && href) {
+		return (
+			<a
+				href={href}
+				target="_blank"
+				rel="noopener noreferrer"
+				className="text-foreground-title hover:underline underline-offset-2"
+			>
+				{value}
+			</a>
+		);
+	}
+	return value ?? "—";
+}
+
+function shortenUrl(url: string) {
+	const stripped = url.replace(/^https?:\/\//, "").replace(/^www\./, "");
+	if (stripped.length <= 12) return stripped;
+	return `${stripped.slice(0, 7)}…${stripped.slice(-3)}`;
+}
+
+function renderLink(value: string | null) {
+	if (!value) return "—";
+	return (
+		<a
+			href={value}
+			target="_blank"
+			rel="noopener noreferrer"
+			className="inline-flex items-center gap-1 font-mono text-xs text-foreground-body hover:text-foreground-title transition-colors whitespace-nowrap"
+		>
+			{shortenUrl(value)}
+			<ExternalLink className="size-3" />
+		</a>
 	);
 }
 

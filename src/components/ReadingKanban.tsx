@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, ExternalLink } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import type { ColumnDef, Row } from "@/types";
@@ -103,6 +103,12 @@ function PropertyDropdown({
 			)}
 		</div>
 	);
+}
+
+function shortenUrl(url: string) {
+	const stripped = url.replace(/^https?:\/\//, "").replace(/^www\./, "");
+	if (stripped.length <= 12) return stripped;
+	return `${stripped.slice(0, 7)}…${stripped.slice(-3)}`;
 }
 
 function renderTag(
@@ -295,17 +301,41 @@ function KanbanCard({
 	colorMap: Map<string, number>;
 }) {
 	const title = titleCol ? row.cells[titleCol.name] : null;
+	const linkCol = otherCols.find(c => c.isLink);
+	const href = linkCol ? row.cells[linkCol.name] : null;
 
 	const visibleProps = otherCols.filter(
-		c => row.cells[c.name] && c.type !== "files",
+		c => row.cells[c.name] && c.type !== "files" && !c.isLink,
 	);
 
 	return (
 		<div className="bg-card border border-border rounded-md p-3 flex flex-col gap-1.5">
 			{title && (
 				<p className="text-sm font-medium text-foreground-title leading-snug">
-					{title}
+					{href ? (
+						<a
+							href={href}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="text-foreground-title hover:underline underline-offset-2"
+						>
+							{title}
+						</a>
+					) : (
+						title
+					)}
 				</p>
+			)}
+			{href && (
+				<a
+					href={href}
+					target="_blank"
+					rel="noopener noreferrer"
+					className="inline-flex items-center gap-1 self-start font-mono text-[11px] text-foreground-body hover:text-foreground-title transition-colors"
+				>
+					{shortenUrl(href)}
+					<ExternalLink className="size-3" />
+				</a>
 			)}
 			{visibleProps.length > 0 && (
 				<div className="flex flex-wrap gap-1.5 mt-1">

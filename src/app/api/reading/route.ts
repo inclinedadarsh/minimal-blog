@@ -22,6 +22,7 @@ const VISIBLE_TYPES = new Set([
 	"phone_number",
 	"checkbox",
 	"files",
+	"url",
 ]);
 
 export const dynamic = "force-dynamic";
@@ -65,7 +66,13 @@ export async function GET() {
 				}));
 			}
 
-			columns.push({ id: config.id, name, type: config.type, options });
+			columns.push({
+				id: config.id,
+				name,
+				type: config.type,
+				isLink: config.type === "url",
+				options,
+			});
 			queryProperties.push(name);
 		}
 
